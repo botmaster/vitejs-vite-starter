@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 
-const colors = ['default', 'primary', 'secondary', 'neutral'];
+
 </script>
 
 <template>

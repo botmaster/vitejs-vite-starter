@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Btn from '../components/Btn.vue';
-import IconCheckSvg from '../assets/svg/icon-check.svg?component';
+import Btn from "@/components/Btn.vue";
+import IconCheckSvg from "@/assets/svg/icon-check.svg?component";
 </script>
 
 <template>
