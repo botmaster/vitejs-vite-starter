@@ -5,7 +5,7 @@ import IconCheckSvg from "@/assets/svg/icon-check.svg?component";
 
 <template>
   <div class="container mx-auto mt-24">
-    <div>Components</div>
+    <h1 class="text-3xl font-extrabold">Components</h1>
     <h2 class="mt-4 text-lg font-semibold">Colors</h2>
     <div class="flex gap-2">
       <Btn colorVariant="primary">Primary</Btn>
