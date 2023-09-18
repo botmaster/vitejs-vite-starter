@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import IconLoaderSvg from "../assets/svg/icon-loader.svg?component";
+import {computed} from "vue";
+import IconLoaderSvg from "@svg/icon-loader.svg?component";
 
 // Props types
 export interface Props {

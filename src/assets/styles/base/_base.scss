@@ -1,4 +1,7 @@
 
+html {
+    @apply antialiased text-base;
+}
 
 body {
     @apply bg-gray-200;
