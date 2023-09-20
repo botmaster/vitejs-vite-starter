@@ -4,9 +4,9 @@
 </script>
 
 <template>
-  <component v-if="$route?.meta?.layout" :is="$route.meta.layout"></component>
+  <component :is="$route.meta.layout" v-if="$route?.meta?.layout" />
   <main v-else>
-    <router-view></router-view>
+    <router-view />
   </main>
 </template>
 

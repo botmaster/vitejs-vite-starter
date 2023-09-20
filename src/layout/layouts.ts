@@ -5,12 +5,12 @@
  */
 
 
-import TheAppLayout from "@/layout/TheAppLayout.vue";
-import TheBlankLayout from "@/layout/TheBlankLayout.vue";
-import TheDesignSystemLayout from "@/layout/TheDesignSystemLayout.vue";
+import TheAppLayout from '@/layout/TheAppLayout.vue';
+import TheBlankLayout from '@/layout/TheBlankLayout.vue';
+import TheDesignSystemLayout from '@/layout/TheDesignSystemLayout.vue';
 
 export default {
-    TheAppLayout,
-    TheBlankLayout,
-    TheDesignSystemLayout,
-}
+  TheAppLayout,
+  TheBlankLayout,
+  TheDesignSystemLayout,
+};

@@ -1,36 +1,36 @@
-import {createRouter, createWebHistory} from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/ViewHome.vue';
-import ViewDesignSystem from "@/views/design-system/ViewDesignSystem.vue";
-import layouts from "@/layout/layouts";
+import ViewDesignSystem from '@/views/design-system/ViewDesignSystem.vue';
+import layouts from '@/layout/layouts';
 
 
 const routes = [
-    {
-        path: '/',
-        name: 'home',
-        component: Home,
-        meta: {
-            layout: layouts.TheAppLayout,
-        }
+  {
+    path: '/',
+    name: 'home',
+    component: Home,
+    meta: {
+      layout: layouts.TheAppLayout,
     },
-    {
-        path: '/about',
-        name: 'about',
-        component: () => import('@/views/ViewAbout.vue'),
-        meta: {
-            layout: layouts.TheAppLayout,
-        }
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import('@/views/ViewAbout.vue'),
+    meta: {
+      layout: layouts.TheAppLayout,
     },
-    {
-        path: '/design-system',
-        name: 'designSystem',
-        component: ViewDesignSystem,
-        redirect: {name: 'designSystemHomepage'},
-        meta: {
-            layout: layouts.TheDesignSystemLayout,
-        },
-        children: [
-            /*{
+  },
+  {
+    path: '/design-system',
+    name: 'designSystem',
+    component: ViewDesignSystem,
+    redirect: { name: 'designSystemHomepage' },
+    meta: {
+      layout: layouts.TheDesignSystemLayout,
+    },
+    children: [
+      /*{
                 path: 'colors',
                 name: 'colors',
                 component: () => import('@/views/design-system/ViewDesignSystemColors.vue'),
@@ -45,30 +45,30 @@ const routes = [
                 name: 'icons',
                 component: () => import('@/views/design-system/ViewDesignSystemIcons.vue'),
             },*/
-            {
-                path: 'homepage',
-                name: 'designSystemHomepage',
-                component: () => import('@/views/design-system/ViewDesignSystemHomepage.vue'),
+      {
+        path: 'homepage',
+        name: 'designSystemHomepage',
+        component: () => import('@/views/design-system/ViewDesignSystemHomepage.vue'),
 
-            },
-            {
-                path: 'typography',
-                name: 'designSystemTypography',
-                component: () => import('@/views/design-system/ViewDesignSystemTypography.vue'),
-            },
-            {
-                path: 'components',
-                name: 'designSystemComponents',
-                component: () => import('@/views/design-system/ViewDesignSystemComponents.vue'),
-            }
+      },
+      {
+        path: 'typography',
+        name: 'designSystemTypography',
+        component: () => import('@/views/design-system/ViewDesignSystemTypography.vue'),
+      },
+      {
+        path: 'components',
+        name: 'designSystemComponents',
+        component: () => import('@/views/design-system/ViewDesignSystemComponents.vue'),
+      },
 
-        ],
-    },
+    ],
+  },
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
+  history: createWebHistory(),
+  routes,
 });
 
 export default router;

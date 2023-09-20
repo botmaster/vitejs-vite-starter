@@ -1,43 +1,44 @@
 <script setup lang="ts">
-import {computed, useSlots} from 'vue';
+import { computed, useSlots } from 'vue';
 
 export interface Props {
-  size?: 'sm' | 'md' | 'lg';
-  name?: string;
-  src?: string;
-  status?: 'active' | 'busy' | 'inactive';
-  rounded?: boolean;
-  colorVariant?: string;
+  size?: 'sm' | 'md' | 'lg'
+  name?: string
+  src?: string
+  status?: 'active' | 'busy' | 'inactive'
+  rounded?: boolean
+  colorVariant?: string
 }
 
 // Props
 const props = withDefaults(defineProps<Props>(), {
   size: 'md',
-  rounded: true
-})
+  rounded: true,
+});
 
-const slots = useSlots()
+const slots = useSlots();
 
 // Computed avatar classes
 const avatarClasses = computed(() => {
   const classes = [];
 
-  if (props.size) {
+  if (props.size)
     classes.push(`avatar--${props.size}`);
-  }
 
-  if (!props.rounded) {
+
+  if (!props.rounded)
     classes.push('avatar--is-square');
-  }
+
 
   return classes.join(' ');
 });
 
 // Computed avatar status
+// eslint-disable-next-line vue/return-in-computed-property
 const avatarClassesStatus = computed(() => {
-  if (props.status) {
+  if (props.status)
     return `avatar__status--${props.status}`;
-  }
+
 });
 
 
@@ -46,11 +47,12 @@ const avatarInitials = computed(() => {
   if (props.name) {
     const names = props.name.split(' ');
     let initials = '';
-    names.forEach(name => {
+    names.forEach((name) => {
       initials += name.substring(0, 1);
     });
     return initials.toUpperCase();
   }
+  return '';
 });
 
 // Check if default slot is filled
@@ -60,32 +62,34 @@ const isDefaultSlotFilled = computed(() => {
 
 // computed color variant
 const colorVariant = computed(() => {
-  if (props.colorVariant) {
+  if (props.colorVariant)
     return `avatar--${props.colorVariant}`;
-  }
+  return '';
 });
-
 </script>
 
 <template>
   <div class="avatar" :class="avatarClasses">
     <figure class="avatar__figure" role="img" :aria-label="name" :class="colorVariant">
-
       <p v-if="name || isDefaultSlotFilled" :title="name" class="avatar__initials">
         <slot><span>{{ avatarInitials }}</span></slot>
       </p>
       <template v-else>
-        <svg class="avatar__placeholder" :aria-hidden="!!src" viewBox="0 0 20 20" stroke-linecap="round"
-             stroke-linejoin="round">
-          <circle cx="10" cy="6" r="2.5" stroke="currentColor"/>
-          <path d="M10,10.5a4.487,4.487,0,0,0-4.471,4.21L5.5,15.5h9l-.029-.79A4.487,4.487,0,0,0,10,10.5Z"
-                stroke="currentColor"/>
+        <svg
+          class="avatar__placeholder" :aria-hidden="!!src" viewBox="0 0 20 20" stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="10" cy="6" r="2.5" stroke="currentColor" />
+          <path
+            d="M10,10.5a4.487,4.487,0,0,0-4.471,4.21L5.5,15.5h9l-.029-.79A4.487,4.487,0,0,0,10,10.5Z"
+            stroke="currentColor"
+          />
         </svg>
       </template>
       <img v-if="src" class="avatar__img" :src="src" :alt="name" :title="name">
     </figure>
 
-    <span v-if="status" role="status" class="avatar__status" :class="avatarClassesStatus" aria-label="Active"></span>
+    <span v-if="status" role="status" class="avatar__status" :class="avatarClassesStatus" aria-label="Active" />
   </div>
 </template>
 

@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import {useMouse} from '@vueuse/core'
+import { useMouse } from '@vueuse/core';
 
 // tracks mouse position
-const {x, y} = useMouse()
-
+const { x, y } = useMouse();
 </script>
 
 <template>
