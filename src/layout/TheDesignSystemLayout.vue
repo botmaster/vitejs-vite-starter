@@ -8,10 +8,16 @@
       <div class="w-72 p-4 lg:border-r">
         <ul>
           <li>
-            <router-link to="/">Home</router-link>
+            <router-link to="/">Back to site</router-link>
+          </li>
+          <li>
+            <hr class="-mx-4 my-4">
           </li>
           <li>
             <router-link :to="{name:'designSystem'}">Intro</router-link>
+          </li>
+          <li>
+            <router-link :to="{name:'designSystemTypography'}">Typography</router-link>
           </li>
           <li>
             <router-link :to="{name:'designSystemComponents'}">Components</router-link>
@@ -19,7 +25,7 @@
         </ul>
       </div>
     </aside>
-    <main class="relative lg:grow lg:my-11 lg:px-8">
+    <main class="relative px-4 lg:grow lg:my-11 lg:px-8">
       <router-view/>
     </main>
   </div>

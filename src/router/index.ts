@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import Home from '@/views/ViewHome.vue';
 import ViewDesignSystem from "@/views/design-system/ViewDesignSystem.vue";
+import layouts from "@/layout/layouts";
 
 
 const routes = [
@@ -9,7 +10,7 @@ const routes = [
         name: 'home',
         component: Home,
         meta: {
-            layout: 'default',
+            layout: layouts.TheAppLayout,
         }
     },
     {
@@ -17,7 +18,7 @@ const routes = [
         name: 'about',
         component: () => import('@/views/ViewAbout.vue'),
         meta: {
-            layout: 'default',
+            layout: layouts.TheAppLayout,
         }
     },
     {
@@ -26,7 +27,7 @@ const routes = [
         component: ViewDesignSystem,
         redirect: {name: 'designSystemHomepage'},
         meta: {
-            layout: 'ds',
+            layout: layouts.TheDesignSystemLayout,
         },
         children: [
             /*{
@@ -49,6 +50,11 @@ const routes = [
                 name: 'designSystemHomepage',
                 component: () => import('@/views/design-system/ViewDesignSystemHomepage.vue'),
 
+            },
+            {
+                path: 'typography',
+                name: 'designSystemTypography',
+                component: () => import('@/views/design-system/ViewDesignSystemTypography.vue'),
             },
             {
                 path: 'components',
