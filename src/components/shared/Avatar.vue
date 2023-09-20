@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, useSlots } from 'vue';
+import {computed, useSlots} from 'vue';
 
 export interface Props {
   size?: 'sm' | 'md' | 'lg';
@@ -10,7 +10,7 @@ export interface Props {
   colorVariant?: string;
 }
 
-// Props 
+// Props
 const props = withDefaults(defineProps<Props>(), {
   size: 'md',
   rounded: true
@@ -75,11 +75,11 @@ const colorVariant = computed(() => {
         <slot><span>{{ avatarInitials }}</span></slot>
       </p>
       <template v-else>
-        <svg class="avatar__placeholder" :aria-hidden="src ? true : false" viewBox="0 0 20 20" stroke-linecap="round"
-          stroke-linejoin="round">
-          <circle cx="10" cy="6" r="2.5" stroke="currentColor" />
+        <svg class="avatar__placeholder" :aria-hidden="!!src" viewBox="0 0 20 20" stroke-linecap="round"
+             stroke-linejoin="round">
+          <circle cx="10" cy="6" r="2.5" stroke="currentColor"/>
           <path d="M10,10.5a4.487,4.487,0,0,0-4.471,4.21L5.5,15.5h9l-.029-.79A4.487,4.487,0,0,0,10,10.5Z"
-            stroke="currentColor" />
+                stroke="currentColor"/>
         </svg>
       </template>
       <img v-if="src" class="avatar__img" :src="src" :alt="name" :title="name">
@@ -135,18 +135,18 @@ const colorVariant = computed(() => {
   }
 
   &--primary {
-    --_avatar-bg: theme('colors.primary.500');
+    --_avatar-bg: theme('colors.primary.600');
     --_avatar-color: hsl(0, 0%, 100%);
   }
 
   &--secondary {
-    --_avatar-bg: theme('colors.secondary.500');
+    --_avatar-bg: theme('colors.secondary.600');
     --_avatar-color: hsl(0, 0%, 100%);
   }
 
   &--neutral {
-    --_avatar-bg: theme('colors.neutral.500');
-    --_avatar-color: hsl(0, 0%, 100%);
+    --_avatar-bg: theme('colors.neutral.300');
+    --_avatar-color: theme('colors.neutral.700');
   }
 
   &__figure {

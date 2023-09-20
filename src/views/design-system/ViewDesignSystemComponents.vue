@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import PartialButtons from "@/components/design-system/partials/PartialButtons.vue";
+import PartialAvatars from "@/components/design-system/partials/PartialAvatars.vue";
 </script>
 
 <template>
@@ -9,5 +10,11 @@ import PartialButtons from "@/components/design-system/partials/PartialButtons.v
 
     <!-- Buttons -->
     <PartialButtons></PartialButtons>
+  </div>
+  <hr class="-mx-8 my-16">
+  <div class="prose lg:prose-xl">
+
+    <!-- Avatar -->
+    <PartialAvatars></PartialAvatars>
   </div>
 </template>

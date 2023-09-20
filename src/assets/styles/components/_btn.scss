@@ -1,4 +1,3 @@
-
 @use "sass:selector";
 
 
@@ -12,12 +11,16 @@ button.btn {
   // .btn qui est soit un <button> ou un <a>
 
   @apply relative overflow-hidden inline-flex gap-x-1.5 justify-center items-center whitespace-nowrap no-underline
-           px-[0.8em] py-[0.5em] rounded
-           text-base text-current leading-none
-           cursor-pointer transition-transform shadow;
+  px-[0.8em] py-[0.5em] rounded
+  text-base text-current leading-none
+  cursor-pointer transition-transform shadow;
 
   > svg {
-    @apply w-[1.2em] h-[1.2em] -m-0.5;
+    @apply w-[1.2em] h-[1.2em] -m-0.5 flex-none;
+  }
+
+  > svg ~ span {
+    @apply truncate;
   }
 
   &:active {
@@ -107,19 +110,19 @@ button.btn {
   }
 
   &--icon {
-    @apply p-2;
+    @apply rounded-full min-w-0 aspect-square;
   }
 
   &--sm {
-    @apply text-sm leading-none;
+    @apply text-sm leading-none px-[0.7em] py-[0.4em];
   }
 
   &--md {
-    @apply text-base leading-none;
+    @apply text-base leading-none px-[0.8em] py-[0.5em];
   }
 
   &--lg {
-    @apply text-lg leading-none;
+    @apply text-lg leading-none px-[1em] py-[0.75em];
   }
 
   &--loading {

@@ -11,6 +11,7 @@ export interface Props {
   readonly?: boolean;
   tag?: string;
   loading?: boolean;
+  icon?: boolean;
 }
 
 // Props
@@ -22,6 +23,7 @@ const props = withDefaults(defineProps<Props>(), {
   readonly: false,
   tag: "button",
   loading: false,
+  icon: false,
 });
 
 // Computed classes
@@ -45,6 +47,10 @@ const classes = computed(() => {
 
   if (props.disabled || props.readonly) {
     classes.push("btn--disabled");
+  }
+
+  if (props.icon) {
+    classes.push("btn--icon");
   }
 
   return classes.join(" ");
