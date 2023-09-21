@@ -30,28 +30,24 @@ const props = withDefaults(defineProps<Props>(), {
 const classes = computed(() => {
   const classes = [];
 
-  if (props.loading) 
+  if (props.loading)
     classes.push('btn--loading');
-  
-  if (props.colorVariant) 
+
+  if (props.colorVariant)
     classes.push(`btn--${props.colorVariant}`);
-  
 
-  if (props.outlined) 
+  if (props.outlined)
     classes.push('btn--outlined');
-  
 
-  if (props.size) 
+  if (props.size)
     classes.push(`btn--${props.size}`);
-  
 
-  if (props.disabled || props.readonly) 
+  if (props.disabled || props.readonly)
     classes.push('btn--disabled');
-  
 
-  if (props.icon) 
+  if (props.icon)
     classes.push('btn--icon');
-  
+
 
   return classes.join(' ');
 });

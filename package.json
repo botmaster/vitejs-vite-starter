@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit --composite false",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "sizecheck": "npx vite-bundle-visualizer"
   },
   "dependencies": {
     "@vueuse/core": "^10.4.1",
