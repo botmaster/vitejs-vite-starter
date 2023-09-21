@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import IconCheckSvg from '@svg/icon-check.svg?component';
-import IconVueSvg from '@svg/icon-vue.svg?component';
+import { Icon } from '@iconify/vue';
 import Btn from '@/components/shared/Btn.vue';
 </script>
 
 <template>
-  <h2 class="">
+  <h2>
     Buttons
   </h2>
 
   <div class="lg:grid lg:grid-cols-2 lg:gap-8">
     <div>
-      <h3 class="">
+      <h3>
         Variants
       </h3>
       <div class="flex gap-2 not-prose">
@@ -30,7 +30,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3 class="">
+      <h3>
         Outlined
       </h3>
       <div class="flex gap-2 not-prose">
@@ -49,7 +49,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3 class="">
+      <h3>
         Sizes
       </h3>
       <div class="flex gap-2 items-end not-prose">
@@ -65,42 +65,42 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3 class="">
+      <h3>
         With icons
       </h3>
       <div class="flex gap-2 items-end not-prose">
         <Btn color-variant="primary" size="sm">
-          <IconCheckSvg class="" />
+          <IconCheckSvg />
           <span>With icon</span>
         </Btn>
         <Btn color-variant="primary">
-          <IconCheckSvg class="" />
+          <IconCheckSvg />
           <span>With icon</span>
         </Btn>
         <Btn color-variant="primary" size="lg">
-          <IconCheckSvg class="" />
+          <IconCheckSvg />
           <span>With icon</span>
         </Btn>
       </div>
     </div>
     <div>
-      <h3 class="">
+      <h3>
         Is Icon
       </h3>
       <div class="flex gap-2 items-end not-prose">
         <Btn size="lg" icon>
-          <IconVueSvg class="" />
+          <Icon icon="uim:vuejs" :inline="true" />
         </Btn>
         <Btn icon>
-          <IconVueSvg class="" />
+          <Icon icon="uim:vuejs" :inline="true" />
         </Btn>
         <Btn size="sm" icon>
-          <IconVueSvg class="" />
+          <Icon icon="uim:vuejs" :inline="true" />
         </Btn>
       </div>
     </div>
     <div>
-      <h3 class="">
+      <h3>
         Loading
       </h3>
       <div class="flex gap-2 items-end not-prose">
@@ -110,7 +110,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3 class="">
+      <h3>
         Types
       </h3>
       <div class="flex gap-2 items-end not-prose">
@@ -126,7 +126,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3 class="">
+      <h3>
         CSS Component
       </h3>
       <div class="flex gap-2 items-end not-prose">

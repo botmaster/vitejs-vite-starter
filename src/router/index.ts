@@ -61,7 +61,11 @@ const routes = [
         name: 'designSystemComponents',
         component: () => import('@/views/design-system/ViewDesignSystemComponents.vue'),
       },
-
+      {
+        path: 'icons',
+        name: 'designSystemIcons',
+        component: () => import('@/views/design-system/ViewDesignSystemIcons.vue'),
+      },
     ],
   },
 ];

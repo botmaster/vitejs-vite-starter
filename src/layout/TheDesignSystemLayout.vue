@@ -26,6 +26,11 @@
             </router-link>
           </li>
           <li>
+            <router-link :to="{ name: 'designSystemIcons' }">
+              Icons
+            </router-link>
+          </li>
+          <li>
             <router-link :to="{ name: 'designSystemComponents' }">
               Components
             </router-link>
