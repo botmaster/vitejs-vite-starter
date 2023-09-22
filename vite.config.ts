@@ -14,7 +14,6 @@ export default defineConfig({
     VueDevTools(),
     Icons({ compiler: 'vue3', defaultClass: 'icon' }),
 
-
     // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
     VueI18nPlugin({
       runtimeOnly: true,

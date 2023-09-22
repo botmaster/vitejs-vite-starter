@@ -48,7 +48,6 @@ const classes = computed(() => {
   if (props.icon)
     classes.push('btn--icon');
 
-
   return classes.join(' ');
 });
 </script>

@@ -25,10 +25,8 @@ const avatarClasses = computed(() => {
   if (props.size)
     classes.push(`avatar--${props.size}`);
 
-
   if (!props.rounded)
     classes.push('avatar--is-square');
-
 
   return classes.join(' ');
 });
@@ -38,9 +36,7 @@ const avatarClasses = computed(() => {
 const avatarClassesStatus = computed(() => {
   if (props.status)
     return `avatar__status--${props.status}`;
-
 });
-
 
 // Computed avatar initials
 const avatarInitials = computed(() => {
@@ -93,7 +89,6 @@ const colorVariant = computed(() => {
   </div>
 </template>
 
-
 <style scoped lang="scss">
 .avatar {
 
@@ -116,7 +111,6 @@ const colorVariant = computed(() => {
   //font-size: 1em;
 
   @apply font-medium;
-
 
   &--sm {
     font-size: var(--_avatar-size-sm);
@@ -242,4 +236,3 @@ const colorVariant = computed(() => {
   }
 }
 </style>
-

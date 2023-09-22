@@ -3,7 +3,6 @@ import Home from '@/views/ViewHome.vue';
 import ViewDesignSystem from '@/views/design-system/ViewDesignSystem.vue';
 import layouts from '@/layout/layouts';
 
-
 const routes = [
   {
     path: '/',
@@ -30,7 +29,7 @@ const routes = [
       layout: layouts.TheDesignSystemLayout,
     },
     children: [
-      /*{
+      /* {
                 path: 'colors',
                 name: 'colors',
                 component: () => import('@/views/design-system/ViewDesignSystemColors.vue'),
@@ -44,7 +43,7 @@ const routes = [
                 path: 'icons',
                 name: 'icons',
                 component: () => import('@/views/design-system/ViewDesignSystemIcons.vue'),
-            },*/
+            }, */
       {
         path: 'homepage',
         name: 'designSystemHomepage',

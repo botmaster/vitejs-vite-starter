@@ -6,7 +6,6 @@ import messages from '@intlify/unplugin-vue-i18n/messages';
 import router from './router';
 import App from './App.vue';
 
-
 const i18n = createI18n({
   legacy: false,
   locale: 'en',
