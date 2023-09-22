@@ -19,6 +19,9 @@
         "./src/assets/svg/*"
       ]
     },
+    "types": [
+      "unplugin-icons/types/vue"
+    ],
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "noEmit": true,
@@ -28,10 +31,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "skipLibCheck": true,
-    "types": [
-      "unplugin-icons/types/vue",
-    ]
+    "skipLibCheck": true
   },
   "references": [
     {
@@ -42,6 +42,6 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue"
-  ],
+  ]
 }
 
