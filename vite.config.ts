@@ -1,4 +1,5 @@
 import { URL, fileURLToPath } from 'node:url';
+import * as path from 'node:path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import svgLoader from 'vite-svg-loader';
@@ -16,10 +17,8 @@ export default defineConfig({
 
     // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
     VueI18nPlugin({
-      runtimeOnly: true,
-      compositionOnly: true,
-      fullInstall: true,
-      include: ['./src/locales/**'],
+      include: path.resolve(__dirname, './src/locales/**'),
+      jitCompilation: true,
     }),
   ],
   resolve: {

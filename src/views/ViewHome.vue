@@ -6,14 +6,12 @@ import { useI18n } from 'vue-i18n';
 const { x, y } = useMouse();
 
 const { t } = useI18n({
-  inheritLocale: true,
-  useScope: 'local',
 });
 </script>
 
 <template>
   <div class="">
-    <h2>{{ t('view-home') }}</h2>
+    <h2>{{ t("view-home") }}</h2>
     <pre>Mouse position: {{ x }}, {{ y }}</pre>
   </div>
 </template>
