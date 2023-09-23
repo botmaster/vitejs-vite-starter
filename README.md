@@ -16,7 +16,7 @@ Time saving. Setting up a Vue.js application from scratch takes time.
 
 - 🎨 [Tailwindcss](https://tailwindcss.com/) -  a utility-first CSS framework.
 
-- Sass [Sass](https://sass-lang.com/) - Yes, I use Sass AND Tailwind.
+- 📜 [Sass](https://sass-lang.com/) - Yes, I use Sass AND Tailwind.
 
 - 🍍 State Management via [Pinia](https://pinia.vuejs.org/)
 
