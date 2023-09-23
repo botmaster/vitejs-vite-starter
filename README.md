@@ -2,6 +2,8 @@
 
 > ⚠️ WIP
 
+> 📢 This template fit to my workflow. It's constantly evolving.
+
 ## Why?
 Time saving. Setting up a Vue.js application from scratch takes time.
 
@@ -11,7 +13,7 @@ Time saving. Setting up a Vue.js application from scratch takes time.
 
 
 ## Features
-⚠️
+
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/)
 
 - 🎨 [Tailwindcss](https://tailwindcss.com/) -  a utility-first CSS framework.
@@ -31,6 +33,7 @@ Time saving. Setting up a Vue.js application from scratch takes time.
 
 ## Upcoming features / Libs / Plugins
 
+- Headless UI
 - ViteTest
 - Storybook
 - VueQuery
