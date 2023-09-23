@@ -1,17 +1,17 @@
 # Vue.js Vite Starter Template - [![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
 
-> WIP
+> ⚠️ WIP
 
 ## Why?
 Time saving. Setting up a Vue.js application from scratch takes time.
 
-> Largely inspired by [Vitesse](https://github.com/antfu/vitesse) by [Anthony Fu](https://github.com/antfu)
+> Largely inspired by [Vitesse](https://github.com/antfu/vitesse) by [Anthony Fu](https://github.com/antfu) 🙏
 
 
 
 
 ## Features
-
+⚠️
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/)
 
 - 🎨 [Tailwindcss](https://tailwindcss.com/) -  a utility-first CSS framework.
