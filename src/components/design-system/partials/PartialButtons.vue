@@ -18,8 +18,8 @@ import Btn from '@/components/shared/Btn.vue';
         <Btn color-variant="primary">
           Primary
         </Btn>
-        <Btn color-variant="secondary">
-          Secondary
+        <Btn color-variant="accent">
+          Accent
         </Btn>
         <Btn color-variant="neutral">
           Neutral
@@ -37,8 +37,8 @@ import Btn from '@/components/shared/Btn.vue';
         <Btn color-variant="primary" outlined>
           Primary
         </Btn>
-        <Btn color-variant="secondary" outlined>
-          Secondary
+        <Btn color-variant="accent" outlined>
+          accent
         </Btn>
         <Btn color-variant="neutral" outlined>
           Neutral
@@ -133,7 +133,7 @@ import Btn from '@/components/shared/Btn.vue';
         <button class="btn btn--primary">
           Button
         </button>
-        <a href="#" class="btn btn--secondary">Html a tag</a>
+        <a href="#" class="btn btn--accent">Html a tag</a>
       </div>
     </div>
   </div>

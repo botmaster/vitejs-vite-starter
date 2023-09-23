@@ -55,26 +55,26 @@ button.btn {
     }
   }
 
-  &--secondary {
-    @apply bg-secondary-600 text-white shadow-secondary-600/20;
+  &--accent {
+    @apply bg-accent-600 text-white shadow-accent-600/20;
 
     &:hover {
-      @apply bg-secondary-600/70;
+      @apply bg-accent-600/70;
     }
 
     &:focus-visible {
-      @apply bg-secondary-600/70;
+      @apply bg-accent-600/70;
     }
 
     &.btn--outlined {
-      @apply bg-transparent border border-secondary-600 text-secondary-600;
+      @apply bg-transparent border border-accent-600 text-accent-600;
 
       &:hover {
-        @apply bg-secondary-600 text-white;
+        @apply bg-accent-600 text-white;
       }
 
       &:focus-visible {
-        @apply bg-secondary-600 text-white;
+        @apply bg-accent-600 text-white;
       }
     }
   }

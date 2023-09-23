@@ -137,8 +137,8 @@ const colorVariant = computed(() => {
     --_avatar-color: hsl(0, 0%, 100%);
   }
 
-  &--secondary {
-    --_avatar-bg: theme('colors.secondary.600');
+  &--accent {
+    --_avatar-bg: theme('colors.accent.600');
     --_avatar-color: hsl(0, 0%, 100%);
   }
 

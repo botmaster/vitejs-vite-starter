@@ -4,7 +4,7 @@ import Avatar from '@/components/shared/Avatar.vue';
 const colors = [
   'default',
   'primary',
-  'secondary',
+  'accent',
   'neutral',
 ];
 </script>
