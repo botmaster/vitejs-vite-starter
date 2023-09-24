@@ -5,8 +5,9 @@ html {
 }
 
 body {
-    @apply bg-body-background text-body-text;
+    @apply font-body bg-body-background text-body-text;
 }
+
 
 // TODO: Choose between these two icons libraries. I prefer iconify/vue.
 // Icons - unplugin-icons

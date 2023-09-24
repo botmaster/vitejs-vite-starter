@@ -20,6 +20,7 @@ $color-warning: $color-yellow;
 $color-danger: $color-red;
 
 // Neutral colors
+$color-gray-50: #f8f9fa74;
 $color-gray-100: #f8f9fa;
 $color-gray-200: #e9ecef;
 $color-gray-300: #dee2e6;
@@ -39,6 +40,7 @@ $colors: (
   "pink": $color-pink,
   "white": $color-white,
   "black": $color-black,
+  "gray-50": $color-gray-50,
   "gray-100": $color-gray-100,
   "gray-200": $color-gray-200,
   "gray-300": $color-gray-300,

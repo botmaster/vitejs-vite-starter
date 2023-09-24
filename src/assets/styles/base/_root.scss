@@ -2,7 +2,7 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/tokens' as *;
 
-$darken-amount: 80%;
+$darken-amount: 70%;
 
 $colors: map-merge($colors, (
   "body-background": $body-background,

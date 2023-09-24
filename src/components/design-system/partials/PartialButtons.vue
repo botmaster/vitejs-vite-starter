@@ -11,7 +11,7 @@ import Btn from '@/components/shared/Btn.vue';
 
   <div class="lg:grid lg:grid-cols-2 lg:gap-8">
     <div>
-      <h3>
+      <h3 class="!mt-0">
         Variants
       </h3>
       <div class="flex gap-2 not-prose">
@@ -30,7 +30,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3>
+      <h3 class="!mt-0">
         Outlined
       </h3>
       <div class="flex gap-2 not-prose">
@@ -49,7 +49,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3>
+      <h3 class="!mt-0">
         Sizes
       </h3>
       <div class="flex gap-2 items-end not-prose">
@@ -65,7 +65,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3>
+      <h3 class="!mt-0">
         With icons
       </h3>
       <div class="flex gap-2 items-end not-prose">
@@ -84,7 +84,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3>
+      <h3 class="!mt-0">
         Is Icon
       </h3>
       <div class="flex gap-2 items-end not-prose">
@@ -100,7 +100,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3>
+      <h3 class="!mt-0">
         Loading
       </h3>
       <div class="flex gap-2 items-end not-prose">
@@ -110,7 +110,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3>
+      <h3 class="!mt-0">
         Types
       </h3>
       <div class="flex gap-2 items-end not-prose">
@@ -126,7 +126,7 @@ import Btn from '@/components/shared/Btn.vue';
       </div>
     </div>
     <div>
-      <h3>
+      <h3 class="!mt-0">
         CSS Component
       </h3>
       <div class="flex gap-2 items-end not-prose">
