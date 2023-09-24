@@ -98,10 +98,10 @@ const colorVariant = computed(() => {
   --_avatar-size-md: theme('fontSize.6xl');
   --_avatar-size-lg: theme('fontSize.7xl');
   --_avatar-bg: hsl(240, 4%, 95%);
-  --_avatar-color: hsl(230, 13%, 9%);
-  --_avatar-status-active: hsl(170, 78%, 36%);
-  --_avatar-status-busy: hsl(342, 89%, 48%);
-  --_avatar-status-inactive: hsl(225, 4%, 47%);
+  --_avatar-color: rgb(var(--color-primary-content));
+  --_avatar-status-active: rgb(var(--color-success));
+  --_avatar-status-busy: rgb(var(--color-danger));
+  --_avatar-status-inactive: rgb(var(--color-neutral));
   --_avatar-border-radius: 9999px;
 
   position: relative;
@@ -133,18 +133,18 @@ const colorVariant = computed(() => {
   }
 
   &--primary {
-    --_avatar-bg: theme('colors.primary.600');
-    --_avatar-color: hsl(0, 0%, 100%);
+    --_avatar-bg: theme('colors.primary');
+    --_avatar-color: rgb(var(--color-primary-content));
   }
 
   &--accent {
-    --_avatar-bg: theme('colors.accent.600');
-    --_avatar-color: hsl(0, 0%, 100%);
+    --_avatar-bg: theme('colors.accent');
+    --_avatar-color: rgb(var(--color-accent-content));
   }
 
   &--neutral {
-    --_avatar-bg: theme('colors.neutral.300');
-    --_avatar-color: theme('colors.neutral.700');
+    --_avatar-bg: theme('colors.neutral');
+    --_avatar-color: rgb(var(--color-neutral-content));
   }
 
   &__figure {
@@ -186,7 +186,7 @@ const colorVariant = computed(() => {
     width: 0.2em;
     height: 0.2em;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px hsl(0, 0%, 100%);
+    box-shadow: 0 0 0 2px var(--color-white);
     background-color: var(--_avatar-status-inactive);
 
     &--active {
@@ -211,7 +211,7 @@ const colorVariant = computed(() => {
     height: 1em;
     border-radius: inherit;
     // background-color: var(--_avatar-bg);
-    color: var(--_avatar-color);
+    // color: var(--_avatar-color);
     display: flex;
     justify-content: center;
     align-items: center;

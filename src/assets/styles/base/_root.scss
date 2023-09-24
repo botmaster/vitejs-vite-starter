@@ -1,0 +1,43 @@
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/tokens' as *;
+
+$darken-amount: 80%;
+
+$colors: map-merge($colors, (
+  "body-background": $body-background,
+  "body-text": $body-text,
+));
+
+// Named colors
+@each $name, $color in $colors {
+  :root {
+    --color-#{$name}: #{$color};
+  }
+}
+
+
+// Theme colors
+:root {
+  --color-primary: #{red($color-primary)} #{green($color-primary)} #{blue($color-primary)};
+  --color-primary-content: #{red(darken($color-primary, $darken-amount)) green(darken($color-primary, $darken-amount)) blue(darken($color-primary, $darken-amount))};
+  --color-secondary: #{red($color-secondary)} #{green($color-secondary)} #{blue($color-secondary)};
+  --color-secondary-content: #{red(darken($color-secondary, $darken-amount)) green(darken($color-secondary, $darken-amount)) blue(darken($color-secondary, $darken-amount))};
+  --color-accent: #{red($color-accent)} #{green($color-accent)} #{blue($color-accent)};
+  --color-accent-content: #{red(darken($color-accent, $darken-amount)) green(darken($color-accent, $darken-amount)) blue(darken($color-accent, $darken-amount))};
+  --color-neutral: #{red($color-neutral)} #{green($color-neutral)} #{blue($color-neutral)};
+  --color-neutral-content: #{red(darken($color-neutral, $darken-amount)) green(darken($color-neutral, $darken-amount)) blue(darken($color-neutral, $darken-amount))};
+}
+
+// Feedback colors
+:root {
+  --color-success: #{red($color-success)} #{green($color-success)} #{blue($color-success)};
+  --color-success-content: #{red(darken($color-success, $darken-amount)) green(darken($color-success, $darken-amount)) blue(darken($color-success, $darken-amount))};
+  --color-info: #{red($color-info)} #{green($color-info)} #{blue($color-info)};
+  --color-info-content: #{red(darken($color-info, $darken-amount)) green(darken($color-info, $darken-amount)) blue(darken($color-info, $darken-amount))};
+  --color-warning: #{red($color-warning)} #{green($color-warning)} #{blue($color-warning)};
+  --color-warning-content: #{red(darken($color-warning, $darken-amount)) green(darken($color-warning, $darken-amount)) blue(darken($color-warning, $darken-amount))};
+  --color-danger: #{red($color-danger)} #{green($color-danger)} #{blue($color-danger)};
+  --color-danger-content: #{red(darken($color-danger, $darken-amount)) green(darken($color-danger, $darken-amount)) blue(darken($color-danger, $darken-amount))};
+}
+

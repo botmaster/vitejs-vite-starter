@@ -1,10 +1,11 @@
 
+
 html {
     @apply antialiased text-base;
 }
 
 body {
-    @apply bg-gray-200;
+    @apply bg-body-background text-body-text;
 }
 
 // TODO: Choose between these two icons libraries. I prefer iconify/vue.

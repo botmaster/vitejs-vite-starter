@@ -1,7 +1,60 @@
 
-
-
 /**
- * Tokens
+  Colors
  */
 
+// Named colors
+$color-red: #bf616a;
+$color-green: #a3be8c;
+$color-blue: #5e81ac;
+$color-yellow: #ebcb8b;
+$color-pink: #b48ead;
+
+$color-white: #fff;
+$color-black: #000;
+
+// Feedback colors
+$color-success: $color-green;
+$color-info: $color-blue;
+$color-warning: $color-yellow;
+$color-danger: $color-red;
+
+// Neutral colors
+$color-gray-100: #f8f9fa;
+$color-gray-200: #e9ecef;
+$color-gray-300: #dee2e6;
+$color-gray-400: #ced4da;
+$color-gray-500: #adb5bd;
+$color-gray-600: #6c757d;
+$color-gray-700: #495057;
+$color-gray-800: #343a40;
+$color-gray-900: #212529;
+
+// Colors map
+$colors: (
+  "red": $color-red,
+  "green": $color-green,
+  "blue": $color-blue,
+  "yellow": $color-yellow,
+  "pink": $color-pink,
+  "white": $color-white,
+  "black": $color-black,
+  "gray-100": $color-gray-100,
+  "gray-200": $color-gray-200,
+  "gray-300": $color-gray-300,
+  "gray-400": $color-gray-400,
+  "gray-500": $color-gray-500,
+  "gray-600": $color-gray-600,
+  "gray-700": $color-gray-700,
+  "gray-800": $color-gray-800,
+  "gray-900": $color-gray-900,
+  "current": currentColor,
+  "transparent": transparent,
+);
+
+
+// Theme colors
+$color-primary: $color-blue;
+$color-secondary: $color-gray-600;
+$color-accent: $color-pink;
+$color-neutral: $color-gray-400;

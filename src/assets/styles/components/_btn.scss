@@ -32,73 +32,73 @@ button.btn {
     */
 
   &--primary {
-    @apply bg-primary-600 text-white shadow-primary-600/20;
+    @apply bg-primary text-primary-content shadow-primary/20;
 
     &:hover {
-      @apply bg-primary-600/70;
+      @apply bg-primary/70;
     }
 
     &:focus-visible {
-      @apply bg-primary-600/70;
+      @apply bg-primary/70;
     }
 
     &.btn--outlined {
-      @apply bg-transparent border border-primary-600 text-primary-600;
+      @apply bg-transparent border border-primary text-primary;
 
       &:hover {
-        @apply bg-primary-600 text-white;
+        @apply bg-primary text-primary-content;
       }
 
       &:focus-visible {
-        @apply bg-primary-600 text-white;
+        @apply bg-primary text-primary-content;
       }
     }
   }
 
   &--accent {
-    @apply bg-accent-600 text-white shadow-accent-600/20;
+    @apply bg-accent text-primary-content shadow-accent/20;
 
     &:hover {
-      @apply bg-accent-600/70;
+      @apply bg-accent/70;
     }
 
     &:focus-visible {
-      @apply bg-accent-600/70;
+      @apply bg-accent/70;
     }
 
     &.btn--outlined {
-      @apply bg-transparent border border-accent-600 text-accent-600;
+      @apply bg-transparent border border-accent text-accent;
 
       &:hover {
-        @apply bg-accent-600 text-white;
+        @apply bg-accent text-accent-content;
       }
 
       &:focus-visible {
-        @apply bg-accent-600 text-white;
+        @apply bg-accent text-primary-content;
       }
     }
   }
 
   &--neutral {
-    @apply bg-neutral-300 text-neutral-700 shadow-neutral-300/20;
+    @apply bg-neutral text-neutral-content shadow-neutral/20;
 
     &:hover {
-      @apply bg-neutral-300/70;
+      @apply bg-neutral/70;
     }
 
     &:focus-visible {
-      @apply bg-neutral-300/70;
+      @apply bg-neutral/70;
     }
 
     &.btn--outlined {
-      @apply bg-transparent border border-neutral-300 text-neutral-600;
+      @apply bg-transparent border border-neutral text-neutral-content;
 
       &:hover {
-        @apply bg-neutral-300;
+        @apply bg-neutral;
       }
 
       &:focus-visible {
-        @apply bg-neutral-300;
+        @apply bg-neutral;
       }
     }
   }
