@@ -18,3 +18,13 @@ app.use(createPinia());
 app.use(i18n);
 
 app.mount('#app');
+
+
+// Burger menu
+const burger = document.querySelector('#burger');
+const nav = document.querySelector('.header');
+
+burger.addEventListener('click', () => {
+  nav.classList.toggle('header--is-open');
+  burger.classList.toggle('burger--is-active');
+});
