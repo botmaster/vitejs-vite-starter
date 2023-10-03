@@ -16,7 +16,6 @@ export interface Props {
 
 // Props
 const props = withDefaults(defineProps<Props>(), {
-  colorVariant: 'primary',
   outlined: false,
   size: 'md',
   disabled: false,

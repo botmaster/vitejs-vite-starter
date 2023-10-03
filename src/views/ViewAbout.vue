@@ -4,7 +4,9 @@
 
 <template>
   <div>
-    <h1>View About</h1>
+    <h2 class="heading-2 mb-8">
+      About
+    </h2>
   </div>
 </template>
 

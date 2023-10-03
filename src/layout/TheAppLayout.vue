@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 
+const  { t } = useI18n();
 </script>
 
 <template>
@@ -7,15 +9,19 @@
     <header>
       <div class="container mx-auto">
         <router-link to="/">
-          Home
+          {{ t('navMain.home') }}
+        </router-link>
+        |
+        <router-link :to="{ name: 'tasks' }">
+          {{ t('navMain.tasks') }}
         </router-link>
         |
         <router-link :to="{ name: 'about' }">
-          About us
+          {{ t('navMain.about') }}
         </router-link>
         |
         <router-link :to="{ name: 'designSystem' }">
-          Design System
+          {{ t('navMain.designSystem') }}
         </router-link>
       </div>
     </header>

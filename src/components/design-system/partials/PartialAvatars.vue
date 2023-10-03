@@ -3,15 +3,17 @@ import Avatar from '@/components/shared/Avatar.vue';
 
 const colors = [
   'default',
-  'primary',
-  'accent',
   'neutral',
+  'primary',
+  'secondary',
+  'accent',
 ];
 </script>
 
 <template>
-  <h2 class="">
+  <h2 id="avatar" class="relative">
     Avatar
+    <a class="header-anchor" href="#avatar" aria-label="Permalink to &quot;avatar&quot;">​</a>
   </h2>
   <h3 class="">
     Variants

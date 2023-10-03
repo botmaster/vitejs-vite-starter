@@ -10,10 +10,12 @@ button.btn {
 
   // .btn qui est soit un <button> ou un <a>
 
-  @apply relative overflow-hidden inline-flex gap-x-1.5 justify-center items-center whitespace-nowrap no-underline
+  @apply relative overflow-hidden shrink-0 inline-flex gap-x-1.5 justify-center items-center
   px-[0.8em] py-[0.5em] rounded
-  text-base text-current leading-none
-  cursor-pointer transition-transform shadow;
+  text-base text-current leading-none font-medium whitespace-nowrap no-underline
+  cursor-pointer  shadow
+  transition duration-200
+    border border-transparent;
 
   > svg {
     @apply w-[1.2em] h-[1.2em] -m-0.5 flex-none;
@@ -31,15 +33,39 @@ button.btn {
     * Modifiers
     */
 
+  & {
+    @apply bg-gray-200 text-gray-700 border-gray-200 shadow-gray-200/20;
+
+    &:hover {
+      @apply bg-gray-200/50;
+    }
+
+    &:focus-visible {
+      @apply bg-gray-200  outline-gray-200 outline outline-2  outline-offset-2;
+    }
+
+    &.btn--outlined {
+      @apply bg-transparent border border-gray-200 text-gray-700;
+
+      &:hover {
+        @apply bg-gray-200 text-gray-700;
+      }
+
+      &:focus-visible {
+        //@apply border-transparent;
+      }
+    }
+  }
+
   &--primary {
-    @apply bg-primary text-primary-content shadow-primary/20;
+    @apply bg-primary text-primary-content border-primary shadow-primary/20;
 
     &:hover {
       @apply bg-primary/70;
     }
 
     &:focus-visible {
-      @apply bg-primary/70;
+      @apply bg-primary/70 outline-primary;
     }
 
     &.btn--outlined {
@@ -50,20 +76,44 @@ button.btn {
       }
 
       &:focus-visible {
-        @apply bg-primary text-primary-content;
+        //@apply border-transparent;
+      }
+    }
+  }
+
+  &--secondary {
+    @apply bg-secondary text-secondary-content border-secondary shadow-secondary/20;
+
+    &:hover {
+      @apply bg-secondary/70;
+    }
+
+    &:focus-visible {
+      @apply bg-secondary/70 outline-secondary;
+    }
+
+    &.btn--outlined {
+      @apply bg-transparent border border-secondary text-secondary;
+
+      &:hover {
+        @apply bg-secondary text-secondary-content;
+      }
+
+      &:focus-visible {
+        //@apply border-transparent;
       }
     }
   }
 
   &--accent {
-    @apply bg-accent text-primary-content shadow-accent/20;
+    @apply bg-accent text-accent-content border-accent shadow-accent/20;
 
     &:hover {
       @apply bg-accent/70;
     }
 
     &:focus-visible {
-      @apply bg-accent/70;
+      @apply bg-accent/70 outline-accent;
     }
 
     &.btn--outlined {
@@ -74,39 +124,71 @@ button.btn {
       }
 
       &:focus-visible {
-        @apply bg-accent text-primary-content;
+        //@apply border-transparent;
       }
     }
   }
 
   &--neutral {
-    @apply bg-neutral text-neutral-content shadow-neutral/20;
+    @apply bg-neutral text-neutral-content border-neutral shadow-neutral/20;
 
     &:hover {
-      @apply bg-neutral/70;
+      @apply bg-neutral/70 text-neutral-content;
     }
 
     &:focus-visible {
-      @apply bg-neutral/70;
+      @apply bg-neutral/70 outline-neutral;
     }
 
     &.btn--outlined {
-      @apply bg-transparent border border-neutral text-neutral-content;
+      @apply bg-transparent border border-neutral text-neutral;
 
       &:hover {
-        @apply bg-neutral;
+        @apply bg-neutral text-neutral-content;
       }
 
       &:focus-visible {
-        @apply bg-neutral;
+        //@apply border-transparent;
       }
+    }
+  }
+
+  &--ghost {
+    @apply bg-transparent border-transparent shadow-none;
+
+    &:hover {
+      @apply bg-gray-500/20 border-transparent;
+    }
+
+    &:focus-visible {
+      @apply bg-gray-500/20 border-gray-500/20 outline-gray-500/20;
+    }
+
+    &.btn--outlined {
+      @apply hidden;
+    }
+  }
+
+  &--link {
+    @apply bg-transparent border-transparent shadow-none text-primary underline;
+
+    &:hover {
+      @apply bg-transparent border-transparent text-primary;
+    }
+
+    &:focus-visible {
+      @apply bg-transparent border-transparent text-primary outline-primary;
+    }
+
+    &.btn--outlined {
+      @apply hidden;
     }
   }
 
   &--disabled,
   &[disabled],
   &[readonly] {
-    @apply cursor-not-allowed opacity-40;
+    @apply cursor-not-allowed opacity-30;
   }
 
   &--icon {
@@ -122,7 +204,7 @@ button.btn {
   }
 
   &--lg {
-    @apply text-lg leading-none px-[1em] py-[0.75em];
+    @apply text-lg leading-none px-[1.1em] py-[0.75em];
   }
 
   &--loading {

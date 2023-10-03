@@ -8,7 +8,7 @@ import App from './App.vue';
 
 const i18n = createI18n({
   legacy: false,
-  locale: 'en',
+  locale: 'fr',
   messages,
 });
 

@@ -1,43 +1,63 @@
 
 @use '../abstracts/variables' as *;
 @use '../abstracts/tokens' as *;
+@use 'sass:color';
 
-$darken-amount: 80%;
+$darken-amount: 60%;
+$lighten-amount: 50%;
 
-$colors: map-merge($colors, (
+$mergedColors: map-merge($colors, (
   "body-background": $body-background,
   "body-text": $body-text,
+  "muted-text": $text-muted-color,
+  "current": currentColor,
+  "transparent": transparent,
 ));
 
+@function hexToHsl($color) {
+  @return hue($color) saturation($color) lightness($color);
+}
+
 // Named colors
-@each $name, $color in $colors {
-  :root {
-    --color-#{$name}: #{$color};
+@each $name, $color in $mergedColors {
+
+  // if $color is a hex value, convert it to hsl
+  // otherwise, use the color as is
+  @if type-of($color) == "color" {
+    :root {
+      --color-#{$name}-hex: #{$color};
+      --color-#{$name}: #{hexToHsl($color)};
+    }
+  } @else {
+    :root {
+      --color-#{$name}-hex: #{$color};
+    }
   }
+
 }
 
 
 // Theme colors
 :root {
-  --color-primary: #{red($color-primary)} #{green($color-primary)} #{blue($color-primary)};
-  --color-primary-content: #{red(darken($color-primary, $darken-amount)) green(darken($color-primary, $darken-amount)) blue(darken($color-primary, $darken-amount))};
-  --color-secondary: #{red($color-secondary)} #{green($color-secondary)} #{blue($color-secondary)};
-  --color-secondary-content: #{red(darken($color-secondary, $darken-amount)) green(darken($color-secondary, $darken-amount)) blue(darken($color-secondary, $darken-amount))};
-  --color-accent: #{red($color-accent)} #{green($color-accent)} #{blue($color-accent)};
-  --color-accent-content: #{red(darken($color-accent, $darken-amount)) green(darken($color-accent, $darken-amount)) blue(darken($color-accent, $darken-amount))};
-  --color-neutral: #{red($color-neutral)} #{green($color-neutral)} #{blue($color-neutral)};
-  --color-neutral-content: #{red(darken($color-neutral, $darken-amount)) green(darken($color-neutral, $darken-amount)) blue(darken($color-neutral, $darken-amount))};
+  --color-primary: #{hexToHsl($color-primary)};
+  --color-primary-content: #{hexToHsl(lighten($color-primary, $lighten-amount))};
+  --color-secondary: #{hexToHsl($color-secondary)};
+  --color-secondary-content: #{hexToHsl(lighten($color-secondary, $lighten-amount))};
+  --color-accent: #{hexToHsl($color-accent)};
+  --color-accent-content: #{hexToHsl(lighten($color-accent, $lighten-amount))};
+  --color-neutral: #{hexToHsl($color-neutral)};
+  --color-neutral-content: #{hexToHsl(lighten($color-neutral, $lighten-amount))};
 }
 
 // Feedback colors
 :root {
-  --color-success: #{red($color-success)} #{green($color-success)} #{blue($color-success)};
-  --color-success-content: #{red(darken($color-success, $darken-amount)) green(darken($color-success, $darken-amount)) blue(darken($color-success, $darken-amount))};
-  --color-info: #{red($color-info)} #{green($color-info)} #{blue($color-info)};
-  --color-info-content: #{red(darken($color-info, $darken-amount)) green(darken($color-info, $darken-amount)) blue(darken($color-info, $darken-amount))};
-  --color-warning: #{red($color-warning)} #{green($color-warning)} #{blue($color-warning)};
-  --color-warning-content: #{red(darken($color-warning, $darken-amount)) green(darken($color-warning, $darken-amount)) blue(darken($color-warning, $darken-amount))};
-  --color-danger: #{red($color-danger)} #{green($color-danger)} #{blue($color-danger)};
-  --color-danger-content: #{red(darken($color-danger, $darken-amount)) green(darken($color-danger, $darken-amount)) blue(darken($color-danger, $darken-amount))};
+  --color-success: #{hexToHsl($color-success)};
+  --color-success-content: #{hexToHsl(lighten($color-success, $lighten-amount))};
+  --color-info: #{hexToHsl($color-info)};
+  --color-info-content: #{hexToHsl(lighten($color-info, $lighten-amount))};
+  --color-warning:  #{hexToHsl($color-warning)};
+  --color-warning-content: #{hexToHsl(lighten($color-warning, $lighten-amount))};
+  --color-danger:   #{hexToHsl($color-danger)};
+  --color-danger-content: #{hexToHsl(lighten($color-danger, $lighten-amount))};
 }
 

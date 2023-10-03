@@ -14,6 +14,7 @@ export interface Props {
 const props = withDefaults(defineProps<Props>(), {
   size: 'md',
   rounded: true,
+  colorVariant: 'default',
 });
 
 const slots = useSlots();
@@ -97,11 +98,11 @@ const colorVariant = computed(() => {
   --_avatar-size-sm: theme('fontSize.5xl');
   --_avatar-size-md: theme('fontSize.6xl');
   --_avatar-size-lg: theme('fontSize.7xl');
-  --_avatar-bg: hsl(240, 4%, 95%);
-  --_avatar-color: rgb(var(--color-primary-content));
-  --_avatar-status-active: rgb(var(--color-success));
-  --_avatar-status-busy: rgb(var(--color-danger));
-  --_avatar-status-inactive: rgb(var(--color-neutral));
+  --_avatar-bg: theme('colors.gray.200');
+  --_avatar-color: theme('colors.gray.800');
+  --_avatar-status-active: theme('colors.success');
+  --_avatar-status-busy: theme('colors.danger');
+  --_avatar-status-inactive: theme('colors.neutral');
   --_avatar-border-radius: 9999px;
 
   position: relative;
@@ -129,22 +130,27 @@ const colorVariant = computed(() => {
   }
 
   &--default {
-    --_avatar-bg: hsl(240, 4%, 95%);
+
   }
 
   &--primary {
     --_avatar-bg: theme('colors.primary');
-    --_avatar-color: rgb(var(--color-primary-content));
+    --_avatar-color: theme('colors.primary-content');
+  }
+
+  &--secondary {
+    --_avatar-bg: theme('colors.secondary');
+    --_avatar-color: theme('colors.secondary-content');
   }
 
   &--accent {
     --_avatar-bg: theme('colors.accent');
-    --_avatar-color: rgb(var(--color-accent-content));
+    --_avatar-color: theme('colors.accent-content');
   }
 
   &--neutral {
     --_avatar-bg: theme('colors.neutral');
-    --_avatar-color: rgb(var(--color-neutral-content));
+    --_avatar-color: theme('colors.neutral-content');
   }
 
   &__figure {
@@ -157,6 +163,7 @@ const colorVariant = computed(() => {
     /* avatar border-radius */
     overflow: hidden;
     background-color: var(--_avatar-bg);
+    color: var(--_avatar-color);
   }
 
   &__img,
@@ -171,9 +178,6 @@ const colorVariant = computed(() => {
   }
 
   &__placeholder {
-    // background-color: var(--_avatar-bg);
-    //color: hsl(225, 4%, 47%);
-    /* icon color */
     fill: transparent;
     transform: scale(0.7);
   }
@@ -210,8 +214,6 @@ const colorVariant = computed(() => {
     width: 1em;
     height: 1em;
     border-radius: inherit;
-    // background-color: var(--_avatar-bg);
-    // color: var(--_avatar-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,7 +230,6 @@ const colorVariant = computed(() => {
   }
 
   &__users-counter {
-
     /* tot number of users in a group of avatars */
     span {
       font-size: 0.35em;

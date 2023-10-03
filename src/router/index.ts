@@ -21,6 +21,14 @@ const routes = [
     },
   },
   {
+    path: '/tasks',
+    name: 'tasks',
+    component: () => import('@/views/ViewTasks.vue'),
+    meta: {
+      layout: layouts.TheAppLayout,
+    },
+  },
+  {
     path: '/design-system',
     name: 'designSystem',
     component: ViewDesignSystem,
@@ -72,6 +80,18 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, _from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    else
+      if (to.hash) {
+        return {
+          el: to.hash,
+        };
+      }
+    return { top: 0 };
+  },
 });
 
 export default router;

@@ -11,7 +11,9 @@ const { t } = useI18n({
 
 <template>
   <div class="">
-    <h2>{{ t("view-home") }}</h2>
+    <h2 class="heading-2 mb-8">
+      {{ t("view-home") }}
+    </h2>
     <pre>Mouse position: {{ x }}, {{ y }}</pre>
   </div>
 </template>

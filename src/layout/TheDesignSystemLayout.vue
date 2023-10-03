@@ -34,6 +34,23 @@
             <router-link :to="{ name: 'designSystemComponents' }">
               Components
             </router-link>
+            <ul class="ml-4 text-sm">
+              <li>
+                <RouterLink :to="{ name: 'designSystemComponents', hash: '#button' }">
+                  Button
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="{ name: 'designSystemComponents', hash: '#avatar' }">
+                  Avatar
+                </RouterLink>
+              </li>
+              <li>
+                <RouterLink :to="{ name: 'designSystemComponents', hash: '#badge' }">
+                  Badge
+                </RouterLink>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
