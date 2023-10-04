@@ -11,6 +11,13 @@
     "cancel": "Cancel",
     "submit": "Submit"
   },
+  "footer": {
+    "form": {
+      "emailAddress": "Email address",
+      "joinNewsletter": "Join newsletter",
+      "joinOurNewsletter": "Join our newsletter"
+    }
+  },
   "intro": {
     "aka": "Also known as",
     "desc": "Opinionated Vite Starter Template",

@@ -67,17 +67,36 @@ export default {
         '"Noto Color Emoji"',
       ],
     },
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
     extend: {
 
     },
-    container: {
+    container: theme => ({
+      center: true,
       padding: {
-        DEFAULT: '1rem',
-        md: '3rem',
+        DEFAULT: theme('spacing.4'),
+        sm: theme('spacing.6'),
+        lg: theme('spacing.8'),
       },
-    },
+    }),
   },
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')({
     strategy: 'class',
   })],
 };
+

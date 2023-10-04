@@ -1,11 +1,3 @@
-// Task interface
-export interface Task {
-  id: number
-  title: string
-  type: EnumTaskType
-  status: EnumTaskStatus
-}
-
 // Type fot task types
 export enum EnumTaskType {personal = 'personal', work = 'work', shopping = 'shopping', others = 'others'}
 
@@ -17,6 +9,14 @@ export type TaskFilterByType = 'all' | EnumTaskType;
 
 // Type for filters by status
 export type TaskFilterByStatus = 'all' | EnumTaskStatus;
+
+// Task interface
+export interface Task {
+  id: number
+  title: string
+  type: EnumTaskType
+  status: EnumTaskStatus
+}
 
 // Filter interface
 export interface Filter {

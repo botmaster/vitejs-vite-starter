@@ -11,6 +11,13 @@
     "cancel": "Annuler",
     "submit": "Envoyer"
   },
+  "footer": {
+    "form": {
+      "emailAddress": "Adresse email",
+      "joinNewsletter": "Inscription newsletter",
+      "joinOurNewsletter": "S'inscrire à la newsletter"
+    }
+  },
   "intro": {
     "aka": "Aussi connu sous le nom de",
     "desc": "Exemple d'application Vite",

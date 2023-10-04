@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import IconCheckSvg from '@svg/icon-check.svg?component';
 import { Icon } from '@iconify/vue';
-import Btn from '@/components/shared/Btn.vue';
+import AppButton from '@/components/shared/AppButton.vue';
 
 const variants = [
   'default',
@@ -26,9 +26,9 @@ const variants = [
         Variants
       </h3>
       <div class="flex flex-wrap gap-2 not-prose">
-        <Btn v-for="variant in variants" :key="variant" :color-variant="variant">
+        <AppButton v-for="variant in variants" :key="variant" :color-variant="variant">
           {{ variant.charAt(0).toUpperCase() + variant.slice(1) }}
-        </Btn>
+        </AppButton>
       </div>
     </div>
     <div>
@@ -36,9 +36,9 @@ const variants = [
         Outlined
       </h3>
       <div class="flex flex-wrap gap-2 not-prose">
-        <Btn v-for="variant in variants" :key="variant" :color-variant="variant" outlined>
+        <AppButton v-for="variant in variants" :key="variant" :color-variant="variant" outlined>
           {{ variant.charAt(0).toUpperCase() + variant.slice(1) }}
-        </Btn>
+        </AppButton>
       </div>
     </div>
     <div>
@@ -46,15 +46,15 @@ const variants = [
         Sizes
       </h3>
       <div class="flex gap-2 items-end not-prose">
-        <Btn color-variant="primary" size="lg">
+        <AppButton color-variant="primary" size="lg">
           Lg
-        </Btn>
-        <Btn color-variant="primary" size="md">
+        </AppButton>
+        <AppButton color-variant="primary" size="md">
           Md
-        </Btn>
-        <Btn color-variant="primary" size="sm">
+        </AppButton>
+        <AppButton color-variant="primary" size="sm">
           Sm
-        </Btn>
+        </AppButton>
       </div>
     </div>
     <div>
@@ -62,18 +62,18 @@ const variants = [
         With icons
       </h3>
       <div class="flex gap-2 items-end not-prose">
-        <Btn color-variant="primary" size="sm">
+        <AppButton color-variant="primary" size="sm">
           <IconCheckSvg />
           <span>With icon</span>
-        </Btn>
-        <Btn color-variant="primary">
+        </AppButton>
+        <AppButton color-variant="primary">
           <IconCheckSvg />
           <span>With icon</span>
-        </Btn>
-        <Btn color-variant="primary" size="lg">
+        </AppButton>
+        <AppButton color-variant="primary" size="lg">
           <IconCheckSvg />
           <span>With icon</span>
-        </Btn>
+        </AppButton>
       </div>
     </div>
     <div>
@@ -81,15 +81,15 @@ const variants = [
         Is Icon
       </h3>
       <div class="flex gap-2 items-end not-prose">
-        <Btn size="lg" icon color-variant="">
+        <AppButton size="lg" icon color-variant="">
           <Icon icon="uim:vuejs" :inline="true" />
-        </Btn>
-        <Btn icon color-variant="">
+        </AppButton>
+        <AppButton icon color-variant="">
           <Icon icon="uim:vuejs" :inline="true" />
-        </Btn>
-        <Btn size="sm" icon color-variant="">
+        </AppButton>
+        <AppButton size="sm" icon color-variant="">
           <Icon icon="uim:vuejs" :inline="true" />
-        </Btn>
+        </AppButton>
       </div>
     </div>
     <div>
@@ -97,9 +97,9 @@ const variants = [
         Loading
       </h3>
       <div class="flex gap-2 items-end not-prose">
-        <Btn color-variant="primary" loading>
+        <AppButton color-variant="primary" loading>
           coucou
-        </Btn>
+        </AppButton>
       </div>
     </div>
     <div>
@@ -107,10 +107,10 @@ const variants = [
         Types
       </h3>
       <div class="flex gap-2 items-end not-prose">
-        <Btn color-variant="primary" tag="a" href="#">
+        <AppButton color-variant="primary" tag="a" href="#">
           Tag is a
-        </Btn>
-        <Btn
+        </AppButton>
+        <AppButton
           color-variant="primary"
           tag="input"
           type="submit"

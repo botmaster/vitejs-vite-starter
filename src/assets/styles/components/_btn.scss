@@ -1,11 +1,7 @@
 @use "sass:selector";
 
 
-.btn,
-input[type="submit"].btn,
-input[type="reset"].btn,
-input[type="button"].btn,
-button.btn {
+.btn {
   $self: &;
 
   // .btn qui est soit un <button> ou un <a>

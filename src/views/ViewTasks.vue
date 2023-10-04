@@ -4,7 +4,7 @@ import { computed, reactive, ref, watch } from 'vue';
 import { Icon } from '@iconify/vue';
 import { useI18n } from 'vue-i18n';
 import _capitalize from 'lodash/capitalize';
-import Btn from '@/components/shared/Btn.vue';
+import AppButton from '@/components/shared/AppButton.vue';
 import { useTasklistStore } from '@/stores/tasklistStore.ts';
 import type { Filter, Task, TaskFilterByStatus, TaskFilterByType } from '@/types/taskList.ts';
 import { EnumTaskStatus, EnumTaskType } from '@/types/taskList.ts';
@@ -348,22 +348,22 @@ function onMountedInput({ el }: { el: HTMLInputElement }) {
                   </option>
                 </select>
                 <div class="flex gap-2 ml-auto">
-                  <Btn
+                  <AppButton
                     size="sm"
                     color-variant="ghost"
                     :disabled="tasksStore.loading"
                     @click="cancelEdit(item)"
                   >
                     {{ t('common.cancel') }}
-                  </Btn>
-                  <Btn
+                  </AppButton>
+                  <AppButton
                     size="sm"
                     color-variant="accent"
                     :disabled="tasksStore.loading"
                     type="submit"
                   >
                     {{ t('common.submit') }}
-                  </Btn>
+                  </AppButton>
                 </div>
               </div>
             </form>
@@ -384,7 +384,7 @@ function onMountedInput({ el }: { el: HTMLInputElement }) {
         {{ t('pages.tasks.uncompletedTasks', { count: uncompletedTasksCount }) }}
       </p>
       <!-- Delete completed tasks     -->
-      <Btn
+      <AppButton
         v-if="uncompletedTasksCount < tasksStore.taskList.length"
         size="sm"
         color-variant="neutral"
@@ -393,7 +393,7 @@ function onMountedInput({ el }: { el: HTMLInputElement }) {
         @click="clearCompletedTasks"
       >
         {{ t('pages.tasks.deleteCompleted') }}
-      </Btn>
+      </AppButton>
     </div>
   </div>
 </template>

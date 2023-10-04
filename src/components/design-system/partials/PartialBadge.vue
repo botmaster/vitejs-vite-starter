@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Badge from '@/components/shared/Badge.vue';
+import Badge from '@/components/shared/AppBadge.vue';
 
 const colors = [
   'default',

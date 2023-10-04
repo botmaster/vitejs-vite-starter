@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Avatar from '@/components/shared/Avatar.vue';
+import Avatar from '@/components/shared/AppAvatar.vue';
 
 const colors = [
   'default',
