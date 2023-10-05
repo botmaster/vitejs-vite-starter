@@ -3,11 +3,11 @@ import Badge from '@/components/shared/AppBadge.vue';
 
 const colors = [
   'default',
-  'error',
+  'danger',
   'warning',
   'success',
   'neutral',
-];
+] as const;
 </script>
 
 <template>

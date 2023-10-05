@@ -11,7 +11,7 @@ const variants = [
   'neutral',
   'ghost',
   'link',
-];
+] as const;
 </script>
 
 <template>
@@ -81,13 +81,13 @@ const variants = [
         Is Icon
       </h3>
       <div class="flex gap-2 items-end not-prose">
-        <AppButton size="lg" icon color-variant="">
+        <AppButton size="lg" icon>
           <Icon icon="uim:vuejs" :inline="true" />
         </AppButton>
-        <AppButton icon color-variant="">
+        <AppButton icon>
           <Icon icon="uim:vuejs" :inline="true" />
         </AppButton>
-        <AppButton size="sm" icon color-variant="">
+        <AppButton size="sm" icon>
           <Icon icon="uim:vuejs" :inline="true" />
         </AppButton>
       </div>

@@ -7,7 +7,11 @@
     @apply block truncate;
   }
 
-  &--is-error {
+  &, &--is-default {
+    @apply bg-[#E2EFFE] text-[#1D5695];
+  }
+
+  &--is-danger {
     @apply bg-danger text-danger-content;
   }
 
@@ -17,10 +21,6 @@
 
   &--is-success {
     @apply bg-success text-success-content;
-  }
-
-  &--is-default {
-    @apply bg-[#E2EFFE] text-[#1D5695];
   }
 
   &--is-neutral {

@@ -29,7 +29,7 @@
     * Modifiers
     */
 
-  & {
+  &, &--default {
     @apply bg-gray-200 text-gray-700 border-gray-200 shadow-gray-200/20;
 
     &:hover {
@@ -188,7 +188,7 @@
   }
 
   &--icon {
-    @apply rounded-full min-w-0 aspect-square;
+    @apply rounded-full min-w-0 aspect-square border-transparent;
   }
 
   &--sm {

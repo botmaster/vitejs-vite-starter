@@ -2,11 +2,17 @@
 import { computed } from 'vue';
 import IconLoaderSvg from '@svg/icon-loader.svg?component';
 
+// Color variants type
+type ButtonColorVariantType = 'default' | 'primary' | 'secondary' | 'accent' | 'danger' | 'neutral' | 'link' | 'ghost';
+
+// Size type
+type ButtonSizeType = 'sm' | 'md' | 'lg';
+
 // Props types
 export interface Props {
-  colorVariant?: 'primary' | 'secondary' | 'accent' | 'danger' | 'neutral' | 'link' | 'ghost'
+  colorVariant?: ButtonColorVariantType
   outlined?: boolean
-  size?: 'sm' | 'md' | 'lg'
+  size?: ButtonSizeType
   disabled?: boolean
   readonly?: boolean
   tag?: string
@@ -26,7 +32,8 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 // variants map
-const variants = {
+const variants: Record<ButtonColorVariantType, string> = {
+  default: 'btn--default',
   primary: 'btn--primary',
   secondary: 'btn--secondary',
   accent: 'btn--accent',
@@ -34,6 +41,13 @@ const variants = {
   neutral: 'btn--neutral',
   link: 'btn--link',
   ghost: 'btn--ghost',
+};
+
+// Size map
+const sizes: Record<ButtonSizeType, string> = {
+  sm: 'btn--sm',
+  md: 'btn--md',
+  lg: 'btn--lg',
 };
 
 // Computed classes
@@ -50,7 +64,7 @@ const classes = computed(() => {
     classes.push('btn--outlined');
 
   if (props.size)
-    classes.push(`btn--${props.size}`);
+    classes.push(sizes[props.size]);
 
   if (props.disabled || props.readonly)
     classes.push('btn--disabled');
