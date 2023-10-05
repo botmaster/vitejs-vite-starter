@@ -4,7 +4,7 @@ import IconLoaderSvg from '@svg/icon-loader.svg?component';
 
 // Props types
 export interface Props {
-  colorVariant?: string
+  colorVariant?: 'primary' | 'secondary' | 'accent' | 'danger' | 'neutral' | 'link' | 'ghost'
   outlined?: boolean
   size?: 'sm' | 'md' | 'lg'
   disabled?: boolean
@@ -25,6 +25,17 @@ const props = withDefaults(defineProps<Props>(), {
   icon: false,
 });
 
+// variants map
+const variants = {
+  primary: 'btn--primary',
+  secondary: 'btn--secondary',
+  accent: 'btn--accent',
+  danger: 'btn--danger',
+  neutral: 'btn--neutral',
+  link: 'btn--link',
+  ghost: 'btn--ghost',
+};
+
 // Computed classes
 const classes = computed(() => {
   const classes = [];
@@ -33,7 +44,7 @@ const classes = computed(() => {
     classes.push('btn--loading');
 
   if (props.colorVariant)
-    classes.push(`btn--${props.colorVariant}`);
+    classes.push(variants[props.colorVariant]);
 
   if (props.outlined)
     classes.push('btn--outlined');

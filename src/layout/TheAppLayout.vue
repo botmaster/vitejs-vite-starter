@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
 import TheFooter from '@/components/layout/TheFooter.vue';
 import TheHeader from '@/components/layout/TheHeader.vue';
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -8,18 +11,18 @@ import TheHeader from '@/components/layout/TheHeader.vue';
     <TheHeader>
       <template #header-menu-main>
         <RouterLink :to="{ name: 'about' }">
-          Abous
+          {{ t('navMain.about') }}
         </RouterLink>
         <RouterLink :to="{ name: 'tasks' }">
-          Tasks
+          {{ t('navMain.tasks') }}
         </RouterLink>
       </template>
       <template #header-menu-panel="{ close }">
         <RouterLink :to="{ name: 'about' }" @click="close">
-          Abous
+          {{ t('navMain.about') }}
         </RouterLink>
         <RouterLink :to="{ name: 'tasks' }" @click="close">
-          Tasks
+          {{ t('navMain.tasks') }}
         </RouterLink>
       </template>
     </TheHeader>
@@ -30,16 +33,16 @@ import TheHeader from '@/components/layout/TheHeader.vue';
     <TheFooter>
       <template #footer-links>
         <RouterLink :to="{ name: 'home' }">
-          Homepage
+          {{ t('navMain.home') }}
         </RouterLink>
         <RouterLink :to="{ name: 'about' }">
-          Abous
+          {{ t('navMain.about') }}
         </RouterLink>
         <RouterLink :to="{ name: 'tasks' }">
-          Tasks
+          {{ t('navMain.tasks') }}
         </RouterLink>
         <RouterLink :to="{ name: 'designSystemHomepage' }">
-          Design System
+          {{ t('navMain.designSystem') }}
         </RouterLink>
       </template>
     </TheFooter>

@@ -7,8 +7,8 @@
 //@use "components";
 
 @tailwind base;
-@import "@/assets/styles/vendors"; // <-- Placed here because to prevent to be removed by unused CSS purge
 @tailwind components;
+@import "@/assets/styles/vendors"; // <-- Placed here because to prevent to be removed by unused CSS purge. See https://tailwindcss.com/docs/content-configuration#working-with-third-party-libraries
 @tailwind utilities;
 
 @layer base {

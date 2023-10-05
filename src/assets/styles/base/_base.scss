@@ -9,6 +9,27 @@ body {
 }
 
 
+// Links
+/*
+a,
+button {
+    @apply text-[inherit] underline;
 
+    text-decoration-color: theme("colors.current");
+    text-decoration-thickness: from-font;
+    text-underline-offset: 1px;
+    text-decoration-style: solid;
+    transition: color 0.4s;
+
+    &:hover {
+        @apply text-primary;
+        text-decoration-color: theme("colors.current");
+    }
+
+    &:focus {
+        @apply outline-1 outline-offset-2 outline-dotted outline-current;
+    }
+}
+*/
 
 

@@ -33,6 +33,9 @@
   },
   "not-found": "Page non trouvée",
   "pages": {
+    "about": {
+      "about": "À propos"
+    },
     "tasks": {
       "addTask": "Ajouter une tâche",
       "completed": "Terminée",
