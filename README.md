@@ -33,7 +33,6 @@ Time saving. Setting up a Vue.js application from scratch takes time.
 
 ## Upcoming features / Libs / Plugins
 
-- Headless UI
 - ViteTest
 - Storybook
 - VueQuery
@@ -54,6 +53,7 @@ Time saving. Setting up a Vue.js application from scratch takes time.
 
 ### Plugins
 
+- [Headless UI](https://headlessui.com/)
 - [Vue Router](https://github.com/vuejs/vue-router)
 - [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
 - [Vite SVG Loader](https://github.com/jpkleemans/vite-svg-loader#vite-svg-loader)
