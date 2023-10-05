@@ -1,13 +1,22 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue';
 
+// Color variants type
+type AvatarColorVariantType = 'default' | 'primary' | 'secondary' | 'accent' | 'danger' | 'neutral';
+
+// Size type
+type AvatarSizeType = 'sm' | 'md' | 'lg';
+
+// Status type
+type AvatarStatusType = 'active' | 'busy' | 'inactive';
+
 export interface Props {
-  size?: 'sm' | 'md' | 'lg'
+  size?: AvatarSizeType
   name?: string
   src?: string
-  status?: 'active' | 'busy' | 'inactive'
+  status?: AvatarStatusType
   rounded?: boolean
-  colorVariant?: string
+  colorVariant?: AvatarColorVariantType
 }
 
 // Props
@@ -17,6 +26,30 @@ const props = withDefaults(defineProps<Props>(), {
   colorVariant: 'default',
 });
 
+// Size map
+const sizes: Record<AvatarSizeType, string> = {
+  sm: 'avatar--sm',
+  md: 'avatar--md',
+  lg: 'avatar--lg',
+};
+
+// Variants map
+const variants: Record<AvatarColorVariantType, string> = {
+  default: 'avatar--default',
+  primary: 'avatar--primary',
+  secondary: 'avatar--secondary',
+  accent: 'avatar--accent',
+  danger: 'avatar--danger',
+  neutral: 'avatar--neutral',
+};
+
+// Status map
+const status: Record<AvatarStatusType, string> = {
+  active: 'avatar__status--active',
+  busy: 'avatar__status--busy',
+  inactive: 'avatar__status--inactive',
+};
+
 const slots = useSlots();
 
 // Computed avatar classes
@@ -24,10 +57,13 @@ const avatarClasses = computed(() => {
   const classes = [];
 
   if (props.size)
-    classes.push(`avatar--${props.size}`);
+    classes.push(sizes[props.size]);
 
   if (!props.rounded)
     classes.push('avatar--is-square');
+
+  if (props.colorVariant)
+    classes.push(variants[props.colorVariant]);
 
   return classes.join(' ');
 });
@@ -36,7 +72,7 @@ const avatarClasses = computed(() => {
 // eslint-disable-next-line vue/return-in-computed-property
 const avatarClassesStatus = computed(() => {
   if (props.status)
-    return `avatar__status--${props.status}`;
+    return status[props.status];
 });
 
 // Computed avatar initials
@@ -55,13 +91,6 @@ const avatarInitials = computed(() => {
 // Check if default slot is filled
 const isDefaultSlotFilled = computed(() => {
   return slots.default && slots.default().length > 0;
-});
-
-// computed color variant
-const colorVariant = computed(() => {
-  if (props.colorVariant)
-    return `avatar--${props.colorVariant}`;
-  return '';
 });
 </script>
 
@@ -127,6 +156,11 @@ const colorVariant = computed(() => {
 
   &--is-square {
     --_avatar-border-radius: 4px;
+
+    #{$self}__status {
+      bottom: -0.05em;
+      right: -0.05em;
+    }
   }
 
   &--default {
@@ -185,13 +219,18 @@ const colorVariant = computed(() => {
   &__status {
     position: absolute;
     bottom: 0;
-    right: 0;
-    display: inline-block;
+    right: 0.05em;
     width: 0.2em;
     height: 0.2em;
     border-radius: 50%;
     box-shadow: 0 0 0 2px var(--color-white);
-    background-color: var(--_avatar-status-inactive);
+    display: none;
+
+    &--active,
+    &--busy,
+    &--inactive {
+      display: inline-block;
+    }
 
     &--active {
       background-color: var(--_avatar-status-active)

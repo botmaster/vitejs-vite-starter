@@ -7,7 +7,7 @@ const colors = [
   'primary',
   'secondary',
   'accent',
-];
+] as const;
 </script>
 
 <template>
@@ -44,7 +44,7 @@ const colors = [
   </h3>
   <div class="flex items-end  gap-3 not-prose">
     <Avatar src="https://placekitten.com/250/250" status="active" />
-    <Avatar src="https://placekitten.com/250/250" status="busy" />
+    <Avatar src="https://placekitten.com/250/250" status="busy" :rounded="false" />
     <Avatar src="https://placekitten.com/250/250" status="inactive" />
   </div>
   <h3 class="">
