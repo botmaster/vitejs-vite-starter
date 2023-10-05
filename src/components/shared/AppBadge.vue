@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-type ColorVariant = 'default' | 'danger' | 'warning' | 'success' | 'neutral';
+type ColorVariant = 'default' | 'info' | 'danger' | 'warning' | 'success' | 'neutral';
 
 export interface Props {
   label: string
@@ -15,7 +15,8 @@ const props = withDefaults(defineProps<Props>(), {
 // Variants map
 const variants: Record<ColorVariant, string> = {
   default: 'badge--is-default',
-  danger: 'badge--is-dander',
+  info: 'badge--is-info',
+  danger: 'badge--is-danger',
   warning: 'badge--is-warning',
   success: 'badge--is-success',
   neutral: 'badge--is-neutral',

@@ -3,6 +3,7 @@ import Badge from '@/components/shared/AppBadge.vue';
 
 const colors = [
   'default',
+  'info',
   'danger',
   'warning',
   'success',
@@ -21,7 +22,7 @@ const colors = [
   </h3>
   <div class="flex items-end  gap-3 not-prose">
     <Badge v-for="color in colors" :key="color" :label="color" :color-variant="color" />
-    <Badge label="Custom" class="bg-gray-200 text-gray-700" />
+    <Badge label="Custom" class="bg-[#CCFFDD] text-[#33DDFF]" />
   </div>
   <h3 class="">
     CSS component

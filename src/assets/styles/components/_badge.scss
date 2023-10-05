@@ -8,7 +8,11 @@
   }
 
   &, &--is-default {
-    @apply bg-[#E2EFFE] text-[#1D5695];
+    @apply bg-gray-200 text-gray-700;
+  }
+
+  &--is-info {
+    @apply bg-info text-info-content;
   }
 
   &--is-danger {
