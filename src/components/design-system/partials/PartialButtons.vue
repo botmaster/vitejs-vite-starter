@@ -19,6 +19,9 @@ const variants = [
     Buttons
     <a class="header-anchor" href="#button" aria-label="Permalink to &quot;useColorMode&quot;">​</a>
   </h2>
+  <p>
+    Component <code>AppButton</code>
+  </p>
 
   <div class="lg:grid lg:grid-cols-2 lg:gap-8">
     <div>

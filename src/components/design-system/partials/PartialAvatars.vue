@@ -15,6 +15,9 @@ const colors = [
     Avatar
     <a class="header-anchor" href="#avatar" aria-label="Permalink to &quot;avatar&quot;">​</a>
   </h2>
+  <p>
+    Component <code>AppAvatar</code>
+  </p>
   <h3 class="">
     Variants
   </h3>

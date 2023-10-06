@@ -17,6 +17,10 @@ const colors = [
     <a class="header-anchor" href="#badge" aria-label="Permalink to &quot;useColorMode&quot;">​</a>
   </h2>
 
+  <p>
+    Component <code>AppBadge</code>
+  </p>
+
   <h3 class="">
     Variants
   </h3>
