@@ -9,9 +9,11 @@
   @apply relative overflow-hidden shrink-0 inline-flex gap-x-1.5 justify-center items-center
   px-[0.8em] py-[0.5em] rounded
   text-base text-current leading-none font-medium whitespace-nowrap no-underline
-  cursor-pointer  shadow
-  transition duration-200
-    border border-transparent;
+  cursor-pointer
+  border-4 border-transparent;
+
+  transition: all 0.2s ease;
+  will-change: transform;
 
   > svg {
     @apply w-[1.2em] h-[1.2em] -m-0.5 flex-none;
@@ -21,23 +23,23 @@
     @apply truncate;
   }
 
-  &:active {
-    @apply translate-y-0.5;
-  }
-
   /**
     * Modifiers
     */
 
   &, &--default {
-    @apply bg-gray-200 text-gray-700 border-gray-200 shadow-gray-200/20;
+    @apply bg-gray-200 text-gray-700 border-gray-200 outline-0 shadow-md shadow-gray-500/30;
 
     &:hover {
-      @apply bg-gray-200/50;
+      @apply bg-opacity-80 border-opacity-0 shadow-none;
     }
 
     &:focus-visible {
-      @apply bg-gray-200  outline-gray-200 outline outline-2  outline-offset-2;
+      @apply  ring-gray-200 ring-2 ring-offset-2 border-opacity-0 bg-opacity-80;
+    }
+
+    &:active {
+      @apply translate-y-0.5;
     }
 
     &.btn--outlined {
@@ -54,14 +56,14 @@
   }
 
   &--primary {
-    @apply bg-primary text-primary-content border-primary shadow-primary/20;
+    @apply bg-primary text-primary-content border-primary shadow-primary/30;
 
     &:hover {
-      @apply bg-primary/70;
+      //@apply bg-primary border-primary;
     }
 
     &:focus-visible {
-      @apply bg-primary/70 outline-primary;
+      @apply ring-primary;
     }
 
     &.btn--outlined {
@@ -78,14 +80,14 @@
   }
 
   &--secondary {
-    @apply bg-secondary text-secondary-content border-secondary shadow-secondary/20;
+    @apply bg-secondary text-secondary-content border-secondary shadow-secondary/30;
 
     &:hover {
-      @apply bg-secondary/70;
+      //@apply bg-secondary/70;
     }
 
     &:focus-visible {
-      @apply bg-secondary/70 outline-secondary;
+      @apply ring-secondary;
     }
 
     &.btn--outlined {
@@ -102,14 +104,14 @@
   }
 
   &--accent {
-    @apply bg-accent text-accent-content border-accent shadow-accent/20;
+    @apply bg-accent text-accent-content border-accent shadow-accent/30;
 
     &:hover {
-      @apply bg-accent/70;
+      //@apply bg-accent/70;
     }
 
     &:focus-visible {
-      @apply bg-accent/70 outline-accent;
+      @apply ring-accent;
     }
 
     &.btn--outlined {
@@ -129,11 +131,11 @@
     @apply bg-neutral text-neutral-content border-neutral shadow-neutral/20;
 
     &:hover {
-      @apply bg-neutral/70 text-neutral-content;
+      //@apply bg-neutral/70 text-neutral-content;
     }
 
     &:focus-visible {
-      @apply bg-neutral/70 outline-neutral;
+      @apply ring-neutral;
     }
 
     &.btn--outlined {
@@ -157,7 +159,7 @@
     }
 
     &:focus-visible {
-      @apply bg-gray-500/20 border-gray-500/20 outline-gray-500/20;
+      @apply ring-gray-500;
     }
 
     &.btn--outlined {
@@ -173,7 +175,7 @@
     }
 
     &:focus-visible {
-      @apply bg-transparent border-transparent text-primary outline-primary;
+      @apply ring-primary;
     }
 
     &.btn--outlined {

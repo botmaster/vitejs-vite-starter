@@ -10,8 +10,8 @@ body {
 
 
 // Links
-a,
-button {
+a:not(.btn)
+button:not(.btn) {
     @apply text-[inherit] underline;
 
     text-decoration-color: theme("colors.current");
