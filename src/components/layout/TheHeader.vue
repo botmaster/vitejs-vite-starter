@@ -82,11 +82,11 @@ import AppButton from '@/components/shared/AppButton.vue';
               </PopoverPanel>
             </transition>
           </Popover>
-          <AppButton outlined class="hidden lg:block">
+          <AppButton color-variant="ghost" class="hidden lg:block">
             Log in
           </AppButton>
-          <AppButton class="hidden lg:block">
-            Download
+          <AppButton color-variant="primary" class="hidden lg:inline-flex">
+            <Icon icon="mdi:download" /><span>Download</span>
           </AppButton>
         </div>
       </div>

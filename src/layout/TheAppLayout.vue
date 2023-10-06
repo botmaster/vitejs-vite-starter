@@ -26,10 +26,9 @@ const { t } = useI18n();
         </RouterLink>
       </template>
     </TheHeader>
-    <div class="md:container mt-24 flex-grow pb-24 px-6">
+    <div class="flex-grow">
       <router-view />
     </div>
-
     <TheFooter>
       <template #footer-links>
         <RouterLink :to="{ name: 'home' }">

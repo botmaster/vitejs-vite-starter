@@ -10,7 +10,7 @@ body {
 
 
 // Links
-a:not(.btn)
+a:not(.btn),
 button:not(.btn) {
     @apply text-[inherit] underline;
 

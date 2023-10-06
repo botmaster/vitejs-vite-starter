@@ -52,11 +52,11 @@ $mergedColors: map-merge($colors, (
 // Feedback colors
 :root {
   --color-success: #{hexToHsl($color-success)};
-  --color-success-content: #{hexToHsl(lighten($color-success, $lighten-amount))};
+  --color-success-content: #{hexToHsl(darken($color-success, $darken-amount))};
   --color-info: #{hexToHsl($color-info)};
   --color-info-content: #{hexToHsl(lighten($color-info, $lighten-amount))};
   --color-warning:  #{hexToHsl($color-warning)};
-  --color-warning-content: #{hexToHsl(lighten($color-warning, $lighten-amount))};
+  --color-warning-content: #{hexToHsl(darken($color-warning, $darken-amount))};
   --color-danger:   #{hexToHsl($color-danger)};
   --color-danger-content: #{hexToHsl(lighten($color-danger, $lighten-amount))};
 }

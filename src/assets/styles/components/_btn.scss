@@ -6,7 +6,7 @@
 
   // .btn qui est soit un <button> ou un <a>
 
-  @apply relative overflow-hidden shrink-0 inline-flex gap-x-1.5 justify-center items-center
+  @apply relative overflow-hidden shrink-0 inline-flex gap-x-[0.6em] justify-center items-center
   px-[0.8em] py-[0.5em] rounded
   text-base text-current leading-none font-medium whitespace-nowrap no-underline
   cursor-pointer
@@ -16,7 +16,7 @@
   will-change: transform;
 
   > svg {
-    @apply w-[1.2em] h-[1.2em] -m-0.5 flex-none;
+    @apply w-[1.2em] h-[1.2em] -m-0.5 -ml-[0.2em] flex-none;
   }
 
   > svg ~ span {
