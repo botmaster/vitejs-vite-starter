@@ -8,12 +8,12 @@ const { x, y } = useMouse();
 </script>
 
 <template>
-  <div class="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+  <div class="overflow-hidden py-20 sm:py-20 lg:pb-32 xl:pb-36">
     <AppContainer>
       <AppHero />
     </AppContainer>
   </div>
-  <div>
+  <div class="mb-12 lg:mb-24">
     <AppContainer>
       <pre>Mouse position: {{ x }}, {{ y }}</pre>
     </AppContainer>
