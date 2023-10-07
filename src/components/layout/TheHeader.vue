@@ -111,7 +111,7 @@ import AppButton from '@/components/shared/AppButton.vue';
     }
 
     &__menu-main {
-      @apply hidden lg:flex lg:gap-10;
+      @apply hidden lg:flex lg:gap-4;
     }
 
   }

@@ -41,10 +41,11 @@ const paragraphMap = {
       <div v-for="(value, key) in paragraphMap" :key="key" class="not-prose mb-3">
         <pre class="text-gray-600 text-sm">paragraph {{ value }}</pre>
         <p :class="paragraphMap[key]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatum, voluptate, quibusdam, quia voluptas quod dolorum
-          exercitationem voluptatem quos quas quidem. Quisquam voluptatum,
-          voluptate, quibusdam, quia voluptas quod dolorum exercitationem
+          Lorem <i>ipsum</i> dolor sit amet consectetur <s>adipisicing elit</s>. Quisquam
+          voluptatum, <a href="#">voluptate</a>, quibusdam, quia voluptas quod dolorum
+          <b>exercitationem</b> voluptatem quos quas quidem. Quisquam voluptatum,
+          voluptate, quibusdam, quia voluptas quod
+          <mark>dolorum</mark> exercitationem
           voluptatem quos quas quidem.
         </p>
       </div>

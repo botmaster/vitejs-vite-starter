@@ -14,10 +14,10 @@ useHead({
   <div class="flex flex-col h-screen">
     <TheHeader>
       <template #header-menu-main>
-        <RouterLink :to="{ name: 'about' }">
+        <RouterLink :to="{ name: 'about' }" class="btn btn--ghost">
           {{ t('navMain.about') }}
         </RouterLink>
-        <RouterLink :to="{ name: 'tasks' }">
+        <RouterLink :to="{ name: 'tasks' }" class="btn btn--ghost">
           {{ t('navMain.tasks') }}
         </RouterLink>
       </template>
