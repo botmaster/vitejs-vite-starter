@@ -1,18 +1,16 @@
+
 import { createApp } from 'vue';
 import './assets/styles/main.scss';
 import { createPinia } from 'pinia';
-import { createI18n } from 'vue-i18n';
-import messages from '@intlify/unplugin-vue-i18n/messages';
 import router from './router';
 import App from './App.vue';
+import prettyConsole from '@/plugins/pretty-console';
+import i18n from '@/plugins/i18n';
 
-const i18n = createI18n({
-  legacy: false,
-  locale: 'fr',
-  messages,
-});
 
 const app = createApp(App);
+
+app.use(prettyConsole);
 app.use(router);
 app.use(createPinia());
 app.use(i18n);
