@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { useHead } from '@unhead/vue';
 import { useI18n } from 'vue-i18n';
 import TheFooter from '@/components/layout/TheFooter.vue';
 import TheHeader from '@/components/layout/TheHeader.vue';
 
 const { t } = useI18n();
+useHead({
+  title: 'My awesome site',
+});
 </script>
 
 <template>

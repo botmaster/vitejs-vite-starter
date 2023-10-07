@@ -37,7 +37,6 @@ Time saving. Setting up a Vue.js application from scratch takes time.
 - Storybook
 - VueQuery
 - Webfont self-hosting
-- @vueuse/head - manipulate document head reactively
 - ...
 
 ## Pre-packed
@@ -61,6 +60,7 @@ Time saving. Setting up a Vue.js application from scratch takes time.
 - [Vue I18n](https://vue-i18n.intlify.dev/) - Internationalization
   - [unplugin-vue-i18n](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n) - unplugin for Vue I18n
 - [vite-plugin-vue-devtools](https://github.com/webfansplz/vite-plugin-vue-devtools) - Designed to enhance the Vue developer experience.
+- [Unhead](https://unhead.unjs.io/) - manipulate document head reactively
 
 ## Try it now!
 
