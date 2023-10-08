@@ -2,8 +2,8 @@
 import { useHead } from '@unhead/vue';
 
 useHead({
-  titleTemplate: (title?: string) => (!title ? 'Zégut PG 🤘' : `${title} - Zégut PG 🤘`),
-  title: 'My awesome site first',
+  titleTemplate: (title?: string) => (!title ? 'Site name' : `${title} - Site name 🤘`),
+  title: 'Description of the site (via layout)',
   meta: [
     {
       name: 'description',
@@ -14,22 +14,14 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: 'https://vueuse.org/logo.png',
+      href: 'https://vuejs.org/logo.svg',
     },
   ],
   bodyAttrs: {
     onresize: () => {
       console.log('resized');
     },
-  },
-  script: [
-    {
-      src: 'https://unpkg.com/vue@next',
-      onload: () => {
-        console.log('loaded');
-      },
-    },
-  ],
+  }
 });
 </script>
 
