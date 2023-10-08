@@ -23,7 +23,7 @@ const { x, y } = useMouse();
       </p>
     </div>
     <div class="hero__illustration">
-      <div class="-mx-4 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] h-[448px] lg:-bottom-20 lg:-inset-x-10 lg:-top-10 lg:absolute lg:h-auto  lg:pt-10 lg:px-0 px-9 sm:mx-0 xl:-bottom-32">
+      <div class="-mx-4 [mask-image:linear-gradient(to_bottom,#F8F9FAFF_70%,transparent)] h-[448px] lg:-bottom-20 lg:-inset-x-10 lg:-top-10 lg:absolute lg:h-auto  lg:pt-10 lg:px-0 px-9 sm:mx-0 xl:-bottom-32">
         <PhoneFrame class="max-w-[366px] mx-auto drop-shadow-phone-frame">
           <div class="py-8 px-5 text-gray-100">
             <p><code>Mouse position: {{ x }}, {{ y }}</code></p>
