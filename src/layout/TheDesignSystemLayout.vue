@@ -21,6 +21,11 @@
             </router-link>
           </li>
           <li>
+            <router-link :to="{ name: 'designSystemColors' }">
+              Colors
+            </router-link>
+          </li>
+          <li>
             <router-link :to="{ name: 'designSystemTypography' }">
               Typography
             </router-link>

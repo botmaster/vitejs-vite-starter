@@ -105,5 +105,8 @@ export default {
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')({
     strategy: 'class',
   })],
+  /*safelist: [ {
+    pattern: /^(bg|text)-/, // Whitelist bg- and text- utilities for design system.
+  } ],*/
 };
 

@@ -73,6 +73,11 @@ const routes = [
         name: 'designSystemIcons',
         component: () => import('@/views/design-system/ViewDesignSystemIcons.vue'),
       },
+      {
+        path: 'colors',
+        name: 'designSystemColors',
+        component: () => import('@/views/design-system/ViewDesignSystemColors.vue'),
+      },
     ],
   },
 ];

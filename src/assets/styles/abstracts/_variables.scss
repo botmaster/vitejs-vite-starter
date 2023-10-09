@@ -1,3 +1,5 @@
+@use '../abstracts/functions' as *;
+
 /**
   Colors
  */
@@ -30,12 +32,6 @@ $color-pink: #b48ead;
 
 $color-white: #fff;
 $color-black: #000;
-
-// Feedback colors
-$color-success: $color-green;
-$color-info: $color-blue;
-$color-warning: $color-yellow;
-$color-danger: $color-red;
 
 // gray colors
 $color-gray-50: #f8f9fa74;
@@ -76,3 +72,36 @@ $color-primary: $color-blue;
 $color-secondary: $nord-8;
 $color-accent: $color-pink;
 $color-neutral: $color-gray-600;
+
+$darken-amount: 50%;
+$lighten-amount: 40%;
+
+// Theme colors map
+$theme-colors: (
+        "primary": $color-primary,
+        "primary-content": lighten($color-primary, $lighten-amount),
+        "secondary": $color-secondary,
+        "secondary-content": lighten($color-secondary, $lighten-amount),
+        "accent": $color-accent,
+        "accent-content": lighten($color-accent, $lighten-amount),
+        "neutral": $color-neutral,
+        "neutral-content": lighten($color-neutral, $lighten-amount),
+);
+
+// Feedback colors
+$color-success: $color-green;
+$color-info: $color-blue;
+$color-warning: $color-yellow;
+$color-danger: $color-red;
+
+// Feedback colors map
+$feedback-colors: (
+        "success": $color-success,
+        "success-content": darken($color-success, $darken-amount),
+        "info": $color-info,
+        "info-content": lighten($color-info, $lighten-amount),
+        "warning": $color-warning,
+        "warning-content": darken($color-warning, $darken-amount),
+        "danger": $color-danger,
+        "danger-content": lighten($color-danger, $lighten-amount),
+);

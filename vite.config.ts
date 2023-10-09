@@ -21,10 +21,20 @@ export default defineConfig({
       jitCompilation: true,
     }),
   ],
+  build: {
+    commonjsOptions: {
+      include: ['tailwind-config.cjs', 'node_modules/**'],
+    },
+  },
+
+  optimizeDeps: {
+    include: ['tailwind-config'],
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@svg': fileURLToPath(new URL('./src/assets/svg', import.meta.url)),
+      'tailwind-config': path.resolve(__dirname, './tailwind.config.js'),
     },
   },
 });
