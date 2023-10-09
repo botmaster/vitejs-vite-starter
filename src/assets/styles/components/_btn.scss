@@ -28,10 +28,10 @@
     */
 
   &, &--default {
-    @apply bg-gray-200 text-gray-700 border-gray-200 outline-0 shadow-md shadow-gray-500/30;
+    @apply bg-gray-200 text-gray-700 border-gray-200 outline-0 shadow-lg shadow-gray-500/30;
 
     &:hover {
-      @apply bg-opacity-80 border-opacity-0 shadow-none;
+      @apply bg-opacity-80 border-opacity-0;
     }
 
     &:focus-visible {
@@ -39,7 +39,7 @@
     }
 
     &:active {
-      @apply translate-y-0.5;
+      @apply translate-y-0.5 shadow-none;
     }
 
     &.btn--outlined {
@@ -186,11 +186,15 @@
   &--disabled,
   &[disabled],
   &[readonly] {
-    @apply cursor-not-allowed opacity-30;
+    @apply cursor-not-allowed opacity-30 shadow-none;
+
+    &:active {
+      @apply shadow-none translate-y-0;
+    }
   }
 
   &--icon {
-    @apply rounded-full min-w-0 aspect-square border-transparent;
+    @apply rounded-full min-w-0 aspect-square border-transparent shadow-none;
   }
 
   &--sm {

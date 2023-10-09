@@ -32,6 +32,9 @@ const variants = [
         <AppButton v-for="variant in variants" :key="variant" :color-variant="variant">
           {{ variant.charAt(0).toUpperCase() + variant.slice(1) }}
         </AppButton>
+        <AppButton  disabled>
+          Disabled
+        </AppButton>
       </div>
     </div>
     <div>
@@ -41,6 +44,9 @@ const variants = [
       <div class="flex flex-wrap gap-2 not-prose">
         <AppButton v-for="variant in variants" :key="variant" :color-variant="variant" outlined>
           {{ variant.charAt(0).toUpperCase() + variant.slice(1) }}
+        </AppButton>
+        <AppButton  disabled outlined>
+          Disabled
         </AppButton>
       </div>
     </div>

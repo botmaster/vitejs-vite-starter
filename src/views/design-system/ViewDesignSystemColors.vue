@@ -218,7 +218,7 @@ const colorData = Object.entries(colorItemMap).map(([key, value]) => {
       @apply relative w-32 h-32 shrink-0;
 
       span {
-        @apply absolute bottom-2 right-2 text-xs;
+        @apply absolute bottom-2 right-2 text-xs font-bold;
       }
     }
 

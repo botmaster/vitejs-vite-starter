@@ -1,4 +1,5 @@
 @use '../abstracts/functions' as *;
+@use 'sass:color';
 
 /**
   Colors
@@ -73,19 +74,19 @@ $color-secondary: $nord-8;
 $color-accent: $color-pink;
 $color-neutral: $color-gray-600;
 
-$darken-amount: 50%;
-$lighten-amount: 40%;
+$darken-amount: -60%;
+$lighten-amount: 80%;
 
 // Theme colors map
 $theme-colors: (
         "primary": $color-primary,
-        "primary-content": lighten($color-primary, $lighten-amount),
+        "primary-content": color.scale($color-primary, $lightness: $lighten-amount),
         "secondary": $color-secondary,
-        "secondary-content": lighten($color-secondary, $lighten-amount),
+        "secondary-content": color.scale($color-secondary, $lightness: $lighten-amount),
         "accent": $color-accent,
-        "accent-content": lighten($color-accent, $lighten-amount),
+        "accent-content": color.scale($color-accent, $lightness: $lighten-amount),
         "neutral": $color-neutral,
-        "neutral-content": lighten($color-neutral, $lighten-amount),
+        "neutral-content": color.scale($color-neutral, $lightness: $lighten-amount),
 );
 
 // Feedback colors
@@ -97,11 +98,11 @@ $color-danger: $color-red;
 // Feedback colors map
 $feedback-colors: (
         "success": $color-success,
-        "success-content": darken($color-success, $darken-amount),
+        "success-content": color.scale($color-success, $lightness: $darken-amount),
         "info": $color-info,
-        "info-content": lighten($color-info, $lighten-amount),
+        "info-content": color.scale($color-info, $lightness: $lighten-amount),
         "warning": $color-warning,
-        "warning-content": darken($color-warning, $darken-amount),
+        "warning-content": color.scale($color-warning, $lightness: $darken-amount),
         "danger": $color-danger,
-        "danger-content": lighten($color-danger, $lighten-amount),
+        "danger-content": color.scale($color-danger, $lightness: $lighten-amount),
 );
