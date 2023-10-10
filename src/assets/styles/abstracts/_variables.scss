@@ -35,17 +35,17 @@ $color-white: #fff;
 $color-black: #000;
 
 // gray colors
-$color-gray-50: #f8f9fa74;
-$color-gray-100: #f8f9fa;
-$color-gray-200: #e9ecef;
-$color-gray-300: #dee2e6;
-$color-gray-400: #ced4da;
-$color-gray-500: #adb5bd;
-$color-gray-600: #6c757d;
-$color-gray-700: #495057;
-$color-gray-800: #343a40;
-$color-gray-900: #212529;
-
+$color-gray-50: #f9fafb;
+$color-gray-100: #f3f4f6;
+$color-gray-200: #e5e7eb;
+$color-gray-300: #d1d5db;
+$color-gray-400: #9ca3af;
+$color-gray-500: #6b7280;
+$color-gray-600: #4b5563;
+$color-gray-700: #374151;
+$color-gray-800: #1f2937;
+$color-gray-900: #111827;
+$color-gray-950: #030712;
 // Colors map
 $colors: (
         "red": $color-red,
@@ -65,6 +65,7 @@ $colors: (
         "gray-700": $color-gray-700,
         "gray-800": $color-gray-800,
         "gray-900": $color-gray-900,
+        "gray-950": $color-gray-950,
 );
 
 
@@ -75,7 +76,7 @@ $color-accent: $color-pink;
 $color-neutral: $color-gray-600;
 
 $darken-amount: -60%;
-$lighten-amount: 80%;
+$lighten-amount: 90%;
 
 // Theme colors map
 $theme-colors: (

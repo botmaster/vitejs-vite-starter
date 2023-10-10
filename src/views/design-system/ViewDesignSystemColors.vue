@@ -128,6 +128,7 @@ const colorItemMap: Record<string, string> = {
   'gray-700': 'bg-gray-700',
   'gray-800': 'bg-gray-800',
   'gray-900': 'bg-gray-900',
+  'gray-950': 'bg-gray-950',
 };
 
 // Generate color data

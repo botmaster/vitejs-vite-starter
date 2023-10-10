@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import IconLoaderSvg from '@svg/icon-loader.svg?component';
 
 // Color variants type
-type ButtonColorVariantType = 'default' | 'primary' | 'secondary' | 'accent' | 'danger' | 'neutral' | 'link' | 'ghost';
+type ButtonColorVariantType = 'default' | 'primary' | 'secondary' | 'accent' | 'danger' | 'neutral' | 'link' | 'ghost' | 'outlined';
 
 // Size type
 type ButtonSizeType = 'sm' | 'md' | 'lg';
@@ -41,6 +41,7 @@ const variants: Record<ButtonColorVariantType, string> = {
   neutral: 'btn--neutral',
   link: 'btn--link',
   ghost: 'btn--ghost',
+  outlined: 'btn--outlined',
 };
 
 // Size map

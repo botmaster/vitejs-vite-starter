@@ -75,7 +75,7 @@ import AppButton from '@/components/shared/AppButton.vue';
                   <RouterLink class="btn btn--neutral btn--outlined" :to="{ name: 'about' }">
                     Log in
                   </RouterLink>
-                  <AppButton>
+                  <AppButton color-variant="neutral">
                     Download the app
                   </AppButton>
                 </div>
@@ -85,7 +85,7 @@ import AppButton from '@/components/shared/AppButton.vue';
           <AppButton color-variant="ghost" class="hidden lg:block">
             Log in
           </AppButton>
-          <AppButton color-variant="primary" class="hidden lg:inline-flex">
+          <AppButton color-variant="neutral" class="hidden lg:inline-flex">
             <Icon icon="mdi:download" /><span>Download</span>
           </AppButton>
         </div>

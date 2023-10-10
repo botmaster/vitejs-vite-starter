@@ -6,9 +6,9 @@
 
   // .btn qui est soit un <button> ou un <a>
 
-  @apply relative overflow-hidden shrink-0 inline-flex gap-x-[0.6em] justify-center items-center
-  px-[0.8em] py-[0.5em] rounded
-  text-base text-current leading-none font-medium whitespace-nowrap no-underline
+  @apply relative overflow-hidden shrink-0 inline-flex gap-x-[0.5em] justify-center items-center
+  px-[0.8em] py-[0.6em] rounded-md
+  text-sm text-current leading-none font-body font-normal whitespace-nowrap no-underline
   cursor-pointer
   border border-transparent;
 
@@ -43,7 +43,7 @@
     }
 
     &.btn--outlined {
-      @apply bg-transparent border border-gray-200 text-gray-700;
+      @apply border-gray-200 text-gray-700;
 
       &:hover {
         @apply bg-gray-200 text-gray-700;
@@ -53,6 +53,10 @@
         //@apply border-transparent;
       }
     }
+  }
+
+  &--outlined {
+    @apply bg-transparent border;
   }
 
   &--primary {
@@ -155,11 +159,15 @@
     @apply bg-transparent border-transparent shadow-none;
 
     &:hover {
-      @apply bg-gray-500/20 border-transparent;
+      @apply bg-gray-400/10 border-transparent shadow-lg;
     }
 
     &:focus-visible {
       @apply ring-gray-500;
+    }
+
+    &:active {
+      @apply shadow-none;
     }
 
     &.btn--outlined {
@@ -198,15 +206,15 @@
   }
 
   &--sm {
-    @apply text-sm leading-none px-[0.7em] py-[0.4em];
+    @apply text-xs leading-none px-[0.7em] py-[0.4em];
   }
 
   &--md {
-    @apply text-base leading-none px-[0.8em] py-[0.5em];
+    @apply  leading-none;
   }
 
   &--lg {
-    @apply text-lg leading-none px-[1.1em] py-[0.75em];
+    @apply text-base leading-none px-[1em] py-[0.75em];
   }
 
   &--loading {

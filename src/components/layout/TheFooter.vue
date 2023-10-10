@@ -41,9 +41,9 @@ const { t } = useI18n();
             :placeholder="t('footer.form.emailAddress')"
             auto-complete="email"
             required
-            class="form-input min-w-0 shrink text-sm"
+            class="form-input min-w-0 shrink text-xs lg:w-60 py-1"
           >
-          <AppButton type="submit" color-variant="primary" size="sm" class="ml-4 flex-none">
+          <AppButton type="submit" color-variant="neutral" size="sm" class="ml-4 flex-none">
             <span class="hidden lg:inline">{{ t('footer.form.joinOurNewsletter') }}</span>
             <span class="lg:hidden">{{ t('footer.form.joinNewsletter') }}</span>
           </AppButton>
@@ -85,7 +85,7 @@ const { t } = useI18n();
   }
 
   &__form {
-    @apply flex w-full justify-center md:w-auto;
+    @apply flex w-full justify-center  md:w-auto;
   }
 
   &__footer-info {

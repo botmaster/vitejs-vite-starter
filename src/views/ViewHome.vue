@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useMouse } from '@vueuse/core';
+import PhoneFrame from '@/components/PhoneFrame.vue';
 import AppHero from '@/components/layout/AppHero.vue';
 import AppContainer from '@/components/layout/AppContainer.vue';
 
@@ -8,14 +9,48 @@ const { x, y } = useMouse();
 </script>
 
 <template>
-  <div class="overflow-hidden py-20 sm:py-20 lg:pb-32 xl:pb-36">
+  <section class="overflow-hidden py-20 sm:py-20 lg:pb-32 xl:pb-36">
     <AppContainer>
       <AppHero />
     </AppContainer>
-  </div>
-  <div class="mb-12 lg:mb-24">
+  </section>
+  <section class="mb-12 lg:mb-24">
     <AppContainer>
       <pre>Mouse position: {{ x }}, {{ y }}</pre>
     </AppContainer>
-  </div>
+  </section>
+
+  <section class="bg-gray-900 py-20 sm:py-32 text-white">
+    <AppContainer>
+      <div class="mx-auto  lg:mx-0 lg:max-w-3xl prose lg:prose-lg prose-invert">
+        <h2 class="">
+          My awesome feature.
+        </h2>
+        <p class="">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, cum cumque earum, ipsa mollitia nisi nobis omnis praesentium quas quis rem repellat repudiandae saepe suscipit tempore? Aliquam aliquid doloremque labore.
+        </p>
+      </div>
+    </AppContainer>
+    <AppContainer class="mt-16">
+      <div class="grid grid-cols-12 gap-16">
+        <div class="col-span-6">
+          <div>
+            <PhoneFrame class="max-w-[366px] mx-auto">
+              <div class="py-12 px-5 text-white bg-neutral h-full">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi dolore dolorum, eius et, facilis incidunt laboriosam laborum laudantium necessitatibus nobis pariatur quae quod unde voluptas. Ad molestias mollitia sed.</p>
+              </div>
+            </PhoneFrame>
+          </div>
+        </div>
+        <div class="col-span-6 prose lg:prose-lg prose-invert">
+          <h3 class="">
+            Lorem ipsum dolor.
+          </h3>
+          <p class="">
+            Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Adipisci dicta enim eos iusto nam porro quam quia reiciendis saepe sequi? Deleniti eum in molestiae mollitia nulla quam quo rem velit.
+          </p>
+        </div>
+      </div>
+    </AppContainer>
+  </section>
 </template>
