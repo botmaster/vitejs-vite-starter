@@ -1,5 +1,6 @@
 import { URL, fileURLToPath } from 'node:url';
 import * as path from 'node:path';
+import { FontaineTransform } from 'fontaine';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import svgLoader from 'vite-svg-loader';
@@ -19,6 +20,18 @@ export default defineConfig({
     VueI18nPlugin({
       include: path.resolve(__dirname, './src/locales/**'),
       jitCompilation: true,
+    }),
+
+    FontaineTransform.vite({
+      fallbacks: ['ui-sans-serif',
+        'system-ui',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Noto Color Emoji"'],
+      // resolve absolute URL -> file
+      resolvePath: id => new URL(`./src/assets/fonts${id}`, import.meta.url),
     }),
   ],
   build: {

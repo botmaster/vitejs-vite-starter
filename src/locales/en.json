@@ -36,6 +36,13 @@
     "about": {
       "about": "About"
     },
+    "homepage": {
+      "hero": {
+        "cta": "Get started!",
+        "title": "I'm a Hero!"
+      },
+      "myAwesomeFeature": "My awesome feature."
+    },
     "tasks": {
       "addTask": "Add task",
       "completed": "Completed",

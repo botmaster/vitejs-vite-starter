@@ -30,6 +30,8 @@ Time saving. Setting up a Vue.js application from scratch takes time.
 
 - 🌍 [i18n](https://github.com/botmaster/vuejs-vite-starter/tree/main/src/locales) ready
 
+- ⛲️ [Fontaine](https://github.com/danielroe/fontaine) Automatic font fallback based on font metrics
+
 
 ## Upcoming features / Libs / Plugins
 
@@ -61,6 +63,7 @@ Time saving. Setting up a Vue.js application from scratch takes time.
   - [unplugin-vue-i18n](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n) - unplugin for Vue I18n
 - [vite-plugin-vue-devtools](https://github.com/webfansplz/vite-plugin-vue-devtools) - Designed to enhance the Vue developer experience.
 - [Unhead](https://unhead.unjs.io/) - manipulate document head reactively
+- [Fontaine](https://github.com/danielroe/fontaine) - Automatic font fallback based on font metrics
 
 ## Try it now!
 

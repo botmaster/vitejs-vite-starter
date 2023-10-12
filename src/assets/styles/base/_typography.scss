@@ -14,15 +14,15 @@
 }
 
 .heading-1 {
-  @apply text-4xl lg:text-6xl;
+  @apply text-4xl lg:text-6xl font-black uppercase;
 }
 
 .heading-2 {
-  @apply text-3xl lg:text-5xl;
+  @apply text-3xl lg:text-5xl font-black uppercase;
 }
 
 .heading-3 {
-  @apply text-2xl lg:text-4xl;
+  @apply text-2xl lg:text-4xl font-black uppercase;
 }
 
 .heading-4 {

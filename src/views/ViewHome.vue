@@ -1,8 +1,14 @@
 <script setup lang="ts">
 import { useMouse } from '@vueuse/core';
+import { useI18n } from 'vue-i18n';
+import useCounter from '@/composables/useCounter.ts';
 import PhoneFrame from '@/components/PhoneFrame.vue';
 import AppHero from '@/components/layout/AppHero.vue';
 import AppContainer from '@/components/layout/AppContainer.vue';
+
+const { t } = useI18n();
+const { count, isEven, increment, decrement } = useCounter();
+
 
 // tracks mouse position
 const { x, y } = useMouse();
@@ -17,14 +23,21 @@ const { x, y } = useMouse();
   <section class="mb-12 lg:mb-24">
     <AppContainer>
       <pre>Mouse position: {{ x }}, {{ y }}</pre>
+      <pre>Count: {{ count }}<button class="btn ml-4 btn--sm" @click="increment">
+          +
+        </button><button class="btn ml-2 btn--sm" @click="decrement">
+          -
+        </button></pre>
+      <pre>Is even: {{ isEven }}</pre>
+      <div class="flex gap-3" />
     </AppContainer>
   </section>
 
   <section class="bg-gray-900 py-20 sm:py-32 text-white">
     <AppContainer>
-      <div class="mx-auto  lg:mx-0 lg:max-w-3xl prose lg:prose-lg prose-invert">
-        <h2 class="">
-          My awesome feature.
+      <div class="mx-auto lg:mx-0 lg:max-w-3xl">
+        <h2 class="heading-2">
+          {{ t('pages.homepage.myAwesomeFeature') }}
         </h2>
         <p class="">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, cum cumque earum, ipsa mollitia nisi nobis omnis praesentium quas quis rem repellat repudiandae saepe suscipit tempore? Aliquam aliquid doloremque labore.
@@ -42,7 +55,7 @@ const { x, y } = useMouse();
             </PhoneFrame>
           </div>
         </div>
-        <div class="col-span-6 prose lg:prose-lg prose-invert">
+        <div class="col-span-6">
           <h3 class="">
             Lorem ipsum dolor.
           </h3>

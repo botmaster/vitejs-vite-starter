@@ -39,7 +39,7 @@ const paragraphMap = {
     </h2>
     <div class="rounded-lg px-4 py-3 border bg-gray-50">
       <div v-for="(value, key) in paragraphMap" :key="key" class="not-prose mb-3">
-        <pre class="text-gray-600 text-sm">paragraph {{ value }}</pre>
+        <pre class="text-gray-600 text-sm">{{ value }}</pre>
         <p :class="paragraphMap[key]">
           Lorem <i>ipsum</i> dolor sit amet consectetur <s>adipisicing elit</s>. Quisquam
           voluptatum, <a href="#">voluptate</a>, quibusdam, quia voluptas quod dolorum

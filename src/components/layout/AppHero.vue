@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { useMouse } from '@vueuse/core';
+import { useI18n } from 'vue-i18n';
 import PhoneFrame from '@/components/PhoneFrame.vue';
 import AppButton from '@/components/shared/AppButton.vue';
+
+const { t } = useI18n();
 
 // tracks mouse position
 const { x, y } = useMouse();
@@ -10,15 +13,15 @@ const { x, y } = useMouse();
 <template>
   <div class="hero">
     <div class="hero__main">
-      <h1 class="text-4xl font-medium tracking-tight text-gray-900">
-        I'm a Hero!
+      <h1 class="heading-1">
+        {{ t('pages.homepage.hero.title') }}
       </h1>
-      <p class="mt-6 text-lg text-gray-600">
+      <p class="mt-6 paragraph-lg text-gray-600">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad cum, distinctio esse eum iste laudantium, libero, maiores modi optio quidem quo ratione recusandae sed similique sint sit tenetur voluptate.
       </p>
       <p class="mt-6 lg:mt-14">
         <AppButton color-variant="primary" size="lg">
-          Get started
+          {{ t('pages.homepage.hero.cta') }}
         </AppButton>
       </p>
     </div>

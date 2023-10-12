@@ -49,6 +49,7 @@ export default {
     fontFamily: {
       ...defaultTheme.fontFamily,
       display: [
+        'Rubik',
         'ui-sans-serif',
         'system-ui',
         'sans-serif',
@@ -58,6 +59,7 @@ export default {
         '"Noto Color Emoji"',
       ],
       body: [
+        'Inter',
         'ui-sans-serif',
         'system-ui',
         'sans-serif',
