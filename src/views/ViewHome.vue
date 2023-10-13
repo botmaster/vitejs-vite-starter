@@ -3,7 +3,7 @@ import { useMouse } from '@vueuse/core';
 import { useI18n } from 'vue-i18n';
 import useCounter from '@/composables/useCounter.ts';
 import PhoneFrame from '@/components/PhoneFrame.vue';
-import AppHero from '@/components/layout/AppHero.vue';
+import HeroMain from '@/components/HeroMain.vue';
 import AppContainer from '@/components/layout/AppContainer.vue';
 
 const { t } = useI18n();
@@ -17,7 +17,7 @@ const { x, y } = useMouse();
 <template>
   <section class="overflow-hidden py-20 sm:py-20 lg:pb-32 xl:pb-36">
     <AppContainer>
-      <AppHero />
+      <HeroMain />
     </AppContainer>
   </section>
   <section class="mb-12 lg:mb-24">
@@ -33,7 +33,7 @@ const { x, y } = useMouse();
     </AppContainer>
   </section>
 
-  <section class="bg-gray-900 py-20 sm:py-32 text-white">
+  <section class="bg-gray-900 py-12 sm:py-32 text-white">
     <AppContainer>
       <div class="mx-auto lg:mx-0 lg:max-w-3xl">
         <h2 class="heading-2">
@@ -44,8 +44,8 @@ const { x, y } = useMouse();
         </p>
       </div>
     </AppContainer>
-    <AppContainer class="mt-16">
-      <div class="grid grid-cols-12 gap-16">
+    <AppContainer class="mt-8 lg:mt-16">
+      <div class="lg:grid grid-cols-12 gap-16">
         <div class="col-span-6">
           <div>
             <PhoneFrame class="max-w-[366px] mx-auto">
@@ -55,7 +55,7 @@ const { x, y } = useMouse();
             </PhoneFrame>
           </div>
         </div>
-        <div class="col-span-6">
+        <div class="mt-8 lg:mt-0 col-span-6">
           <h3 class="">
             Lorem ipsum dolor.
           </h3>

@@ -33,7 +33,7 @@ export default {
         const gray = { ...theme.gray };
         const  objectKeys = Object.keys(gray);
         objectKeys.forEach((key) => {
-          gray[key] = `hsl(var(--color-gray-${key}, ${gray[key]}) / <alpha-value>)`;
+          gray[key] = `hsl(var(--color-gray-${key}) / <alpha-value>)`;
         });
         return gray;
       })(defaultColors),

@@ -22,6 +22,9 @@ export default defineConfig({
       jitCompilation: true,
     }),
 
+    // https://github.com/danielroe/fontaine
+    // Does not work properly.
+    // TODO: Fix Fontaine implementation.
     FontaineTransform.vite({
       fallbacks: ['ui-sans-serif',
         'system-ui',
@@ -31,7 +34,7 @@ export default defineConfig({
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"'],
       // resolve absolute URL -> file
-      resolvePath: id => new URL(`./src/assets/fonts${id}`, import.meta.url),
+      resolvePath: id => new URL(`.${id}`, import.meta.url),
     }),
   ],
   build: {
