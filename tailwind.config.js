@@ -48,26 +48,9 @@ export default {
     },
     fontFamily: {
       ...defaultTheme.fontFamily,
-      display: [
-        'Rubik',
-        'ui-sans-serif',
-        'system-ui',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
-      body: [
-        'Inter',
-        'ui-sans-serif',
-        'system-ui',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
+      display: 'var(--font-family-display)',
+      body: 'var(--font-family-body)',
+
     },
     screens: {
       'sm': '640px',

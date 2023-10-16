@@ -24,8 +24,8 @@ const { t } = useI18n();
           </div>
           <nav class="footer__nav">
             <slot name="footer-links">
-              <router-link to="to" class="text-sm text-gray-500 hover:text-gray-900">
-                Link
+              <router-link to="home" target="_blank" class="text-sm text-gray-500 hover:text-gray-900">
+                Change me
               </router-link>
             </slot>
           </nav>
@@ -43,13 +43,13 @@ const { t } = useI18n();
             required
             class="form-input min-w-0 shrink text-xs lg:w-60 py-1"
           >
-          <AppButton type="submit" color-variant="neutral" size="sm" class="ml-4 flex-none">
+          <AppButton type="submit" color-variant="neutral" size="sm" class="flex-none rounded-l-none">
             <span class="hidden lg:inline">{{ t('footer.form.joinOurNewsletter') }}</span>
             <span class="lg:hidden">{{ t('footer.form.joinNewsletter') }}</span>
           </AppButton>
         </form>
         <p class="footer__footer-info">
-          &copy; Copyright {{ new Date().getFullYear() }}. All rights reserved.
+          {{ t('footer.copyright', { year: 2023 }) }}
         </p>
       </div>
     </div>
@@ -74,6 +74,10 @@ const { t } = useI18n();
 
   &__nav {
     @apply mt-11 flex flex-wrap gap-x-6 gap-y-2;
+
+    &:deep(> a) {
+      @apply no-underline;
+    }
   }
 
   &__main {

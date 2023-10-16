@@ -12,6 +12,7 @@
     "submit": "Envoyer"
   },
   "footer": {
+    "copyright": "© Copyright {year}. All rights reserved.",
     "form": {
       "emailAddress": "Adresse email",
       "joinNewsletter": "Inscription newsletter",

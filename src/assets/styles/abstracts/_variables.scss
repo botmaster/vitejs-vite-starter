@@ -6,7 +6,6 @@
  */
 
 // Named colors
-
 $nord-0: #2e3440;
 $nord-1: #3b4252;
 $nord-2: #434c5e;
@@ -107,3 +106,12 @@ $feedback-colors: (
         "danger": $color-danger,
         "danger-content": color.scale($color-danger, $lightness: $lighten-amount),
 );
+
+
+/**
+  Fonts
+ */
+
+// Font families
+$font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+$font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace

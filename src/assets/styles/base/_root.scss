@@ -11,7 +11,7 @@ $mergedColors: map-merge($colors, (
         "transparent": transparent,
 ));
 
-// Mixin to create css variables
+// Mixin to create css variables for colors
 @mixin css-variables($map) {
   @each $name, $color in $map {
     // if $color is a hex value, convert it to hsl
@@ -29,10 +29,18 @@ $mergedColors: map-merge($colors, (
   }
 }
 
-// Create css variables
+// Create css variables for colors
 @include css-variables($mergedColors);
 @include css-variables($theme-colors);
 @include css-variables($feedback-colors);
+
+// Create css variables for fonts
+// Note: Not sure if this is really needed. Only colors colors change in the theme.
+:root {
+  --font-family-body: #{$font-family-body};
+  --font-family-display: #{$font-family-display};
+}
+
 
 
 

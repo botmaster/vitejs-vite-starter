@@ -9,20 +9,20 @@
 
 @for $i from 1 through 6 {
   .heading-#{$i} {
-    @apply font-display;
+    @apply font-display font-bold;
   }
 }
 
 .heading-1 {
-  @apply text-4xl lg:text-6xl font-black uppercase;
+  @apply text-4xl lg:text-6xl;
 }
 
 .heading-2 {
-  @apply text-3xl lg:text-5xl font-black uppercase;
+  @apply text-3xl lg:text-5xl;
 }
 
 .heading-3 {
-  @apply text-2xl lg:text-4xl font-black uppercase;
+  @apply text-2xl lg:text-4xl;
 }
 
 .heading-4 {
@@ -41,12 +41,19 @@
 // -------------------------
 
 .paragraph-lg {
-  @apply font-body text-lg;
+  @apply font-body text-lg tracking-tight;
 }
 .paragraph-md {
-  @apply font-body text-base;
+  @apply font-body text-base tracking-tight;
 }
 .paragraph-sm {
-  @apply font-body text-sm;
+  @apply font-body text-sm tracking-tight;
+}
+
+// Flow
+// -------------------------
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: 1em;
 }
 

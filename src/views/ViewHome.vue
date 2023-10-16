@@ -35,7 +35,7 @@ const { x, y } = useMouse();
 
   <section class="bg-gray-900 py-12 sm:py-32 text-white">
     <AppContainer>
-      <div class="mx-auto lg:mx-0 lg:max-w-3xl">
+      <div class="mx-auto lg:mx-0 lg:max-w-3xl flow">
         <h2 class="heading-2">
           {{ t('pages.homepage.myAwesomeFeature') }}
         </h2>
@@ -55,8 +55,8 @@ const { x, y } = useMouse();
             </PhoneFrame>
           </div>
         </div>
-        <div class="mt-8 lg:mt-0 col-span-6">
-          <h3 class="">
+        <div class="mt-8 lg:mt-0 col-span-6 flow">
+          <h3 class="heading-3">
             Lorem ipsum dolor.
           </h3>
           <p class="">
