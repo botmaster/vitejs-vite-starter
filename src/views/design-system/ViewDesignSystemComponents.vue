@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import PartialAlerts from '@/components/design-system/partials/PartialAlerts.vue';
 import PartialBadge from '@/components/design-system/partials/PartialBadge.vue';
 import PartialButtons from '@/components/design-system/partials/PartialButtons.vue';
 import PartialAvatars from '@/components/design-system/partials/PartialAvatars.vue';
@@ -22,6 +23,11 @@ import PartialAvatars from '@/components/design-system/partials/PartialAvatars.v
   <div class="prose lg:prose-xl">
     <!-- Badge -->
     <PartialBadge />
+  </div>
+  <hr class="-mx-8 my-16">
+  <div class="prose lg:prose-xl">
+    <!-- Alerts -->
+    <PartialAlerts />
   </div>
 </template>
 
