@@ -11,6 +11,8 @@ type StatusType = 'success' | 'info' | 'warning' | 'danger' | 'default';
 interface Props {
   status?: StatusType
   closable?: boolean
+  title?: string
+  description?: string
 }
 
 // Props
@@ -18,6 +20,11 @@ const props = withDefaults(defineProps<Props>(), {
   status: 'default',
   closable: true,
 });
+
+// Emits
+const emit = defineEmits<{
+  (e: 'close'): void
+}>();
 
 // Statuses map
 const statuses: Record<StatusType, string> = {
@@ -57,16 +64,21 @@ const icon = computed(() => {
 <template>
   <div class="alert" :class="classes">
     <div v-if="props.status && props.status !== 'default'" class="alert__icon">
-      <Icon :icon="icon" :inline="true" />
+      <Icon :icon="icon" :inline="false" />
     </div>
     <div class="alert__content">
       <slot>
-        <p>Default content.</p>
+        <p v-if="props.title" class="alert__title">
+          {{ props.title }}
+        </p>
+        <p v-if="props.description" class="alert__description">
+          {{ props.description }}
+        </p>
       </slot>
     </div>
     <div v-if="props.closable" class="alert__close">
       <div class="-mx-1.5 -my-1.5">
-        <button type="button" class="close">
+        <button type="button" class="close" @click="emit('close')">
           <span class="sr-only">Dismiss</span>
           <Icon class="h-5 w-5" aria-hidden="true" icon="heroicons:x-mark-20-solid" />
         </button>
@@ -79,19 +91,31 @@ const icon = computed(() => {
 .alert {
   $self: &;
 
-  @apply flex flex-col gap-4 p-4 rounded-md
+  @apply relative flex flex-col gap-4 px-4 py-4 rounded-md
           lg:flex-row lg:items-start;
 
   &__icon {
-    @apply shrink-0 text-xl;
+    @apply shrink-0 leading-none;
+
+    > svg {
+      @apply block h-5 w-5;
+    }
   }
 
   &__content {
-    @apply flex-grow;
+    @apply text-sm;
   }
 
   &__close {
-    @apply flex flex-col gap-2;
+    @apply ml-auto;
+  }
+
+  &__title {
+    @apply font-semibold;
+  }
+
+  &__description {
+    @apply mt-1 leading-tight;
   }
 
   &, &--is-default {

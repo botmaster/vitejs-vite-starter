@@ -67,6 +67,19 @@ describe('Alert component', () => {
 
     expect(wrapper.find('.alert__icon').exists()).toBe(false);
   });
+
+  test ('emits event when close button is clicked', async () => {
+    const wrapper = mount(AppAlert, {
+      data() {
+        return {
+          clicked: false,
+        };
+      },
+    });
+    const closeButton = wrapper.find('.alert__close button');
+    await closeButton.trigger('click');
+    expect(wrapper.emitted()).toHaveProperty('close');
+  } );
 });
 
 
