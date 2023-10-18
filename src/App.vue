@@ -21,7 +21,7 @@ useHead({
     onresize: () => {
       console.log('resized');
     },
-  }
+  },
 });
 </script>
 

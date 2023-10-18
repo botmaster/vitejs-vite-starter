@@ -9,8 +9,8 @@ export default {
     colors: {
       'current': 'currentColor',
       'transparent': 'transparent',
-      'white': 'var(--color-white-hex)',
-      'black': 'var(--color-black-hex)',
+      'white': 'hsl(var(--color-white) / <alpha-value>)',
+      'black': 'hsl(var(--color-black) / <alpha-value>)',
       'primary': 'hsl(var(--color-primary) / <alpha-value>)',
       'primary-content': 'hsl(var(--color-primary-content) / <alpha-value>)',
       'secondary': 'hsl(var(--color-secondary) / <alpha-value>)',

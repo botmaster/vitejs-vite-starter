@@ -55,6 +55,11 @@
                   Badge
                 </RouterLink>
               </li>
+              <li>
+                <RouterLink :to="{ name: 'designSystemComponents', hash: '#alert' }">
+                  Alert
+                </RouterLink>
+              </li>
             </ul>
           </li>
         </ul>
