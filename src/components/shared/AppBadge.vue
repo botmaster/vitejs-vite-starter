@@ -22,7 +22,6 @@ const variants: Record<ColorVariant, string> = {
   neutral: 'badge--is-neutral',
 };
 
-
 // Computed classes
 const classes = computed(() => {
   const classes = [];

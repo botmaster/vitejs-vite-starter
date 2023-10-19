@@ -75,7 +75,6 @@ const typesList: Array<{ value: EnumTaskType; label: string }> = [
 const tasksStore = useTasklistStore();
 tasksStore.fetchData();
 
-
 // Current TaskFilterByType
 const currentFilterByType = ref<TaskFilterByType>('all');
 
@@ -98,7 +97,7 @@ function addTask() {
 
   tasksStore.addTask({
     id: new Date().getTime(),
-    title: _capitalize( newTaskForm.title.trim()),
+    title: _capitalize(newTaskForm.title.trim()),
     type: newTaskForm.type,
     status: EnumTaskStatus.uncompleted,
   });
@@ -133,20 +132,16 @@ function clearCompletedTasks() {
   tasksStore.clearCompletedTasks();
 }
 
-
 // Filtered tasks by status and status
 const filteredTasksByStatusAndType = computed(() => {
   if (currentFilterByStatus.value === 'all' && currentFilterByType.value === 'all')
     return tasksStore.taskList;
 
-
   if (currentFilterByStatus.value === 'all')
     return tasksStore.taskList.filter(task => task.type === currentFilterByType.value);
 
-
   if (currentFilterByType.value === 'all')
     return tasksStore.taskList.filter(task => task.status === currentFilterByStatus.value);
-
 
   return tasksStore.taskList.filter(task => task.status === currentFilterByStatus.value && task.type === currentFilterByType.value);
 });
@@ -154,18 +149,16 @@ const filteredTasksByStatusAndType = computed(() => {
 // Computed number of uncompleted tasks
 const uncompletedTasksCount = computed(() => tasksStore.taskList.filter(task => task.status === EnumTaskStatus.uncompleted).length);
 
-
 let beforeEditCache: Task | null = null;
 
 function onMountedForm({ el }: { el: HTMLFormElement }) {
-
   const { focused } = useFocusWithin(el);
 
   // watch focused
   watch(focused, (focused) => {
     if (!focused) { // if focus is lost
       if (editedTask.value)
-        //doneEdit(editedTask.value);
+        // doneEdit(editedTask.value);
         cancelEdit(editedTask.value);
     }
   });
@@ -321,7 +314,6 @@ function onMountedInput({ el }: { el: HTMLInputElement }) {
                 <input :id="`taskCompleted-${item.id}`" type="checkbox" :checked="item.status === EnumTaskStatus.completed" class="form-checkbox" @change="toggleTask(item.id)">
               </label>
 
-
               <!-- Edit task form -->
               <form
                 v-if="item === editedTask"
@@ -378,7 +370,6 @@ function onMountedInput({ el }: { el: HTMLInputElement }) {
           </p>
         </template>
       </TransitionGroup>
-
 
       <!-- Footer -->
       <div class="flex items-center mt-2 text-muted-text">

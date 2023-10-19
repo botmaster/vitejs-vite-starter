@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { useMouse } from '@vueuse/core';
 import { useI18n } from 'vue-i18n';
-import useCounter from '@/composables/useCounter.ts';
+import useCounter from '@/composables/useCounter';
 import PhoneFrame from '@/components/PhoneFrame.vue';
 import HeroMain from '@/components/HeroMain.vue';
 import AppContainer from '@/components/layout/AppContainer.vue';
 
 const { t } = useI18n();
 const { count, isEven, increment, decrement } = useCounter();
-
 
 // tracks mouse position
 const { x, y } = useMouse();

@@ -17,7 +17,7 @@ const variants = [
 <template>
   <h2 id="button" class="relative">
     Buttons
-    <a class="header-anchor" href="#button" aria-label="Permalink to &quot;useColorMode&quot;">​</a>
+    <a class="header-anchor" href="#button" aria-label="Permalink to &quot;useColorMode&quot;">&nbsp;</a>
   </h2>
   <p>
     Component <code>AppButton</code>

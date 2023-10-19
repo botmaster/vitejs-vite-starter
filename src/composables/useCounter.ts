@@ -1,7 +1,6 @@
 import { computed, onMounted, ref } from 'vue';
 
 export default function useCounter() {
-
   // Initializing
   // Initialize variables, make API calls, or any setup logic
   // For example, using a router
@@ -24,6 +23,7 @@ export default function useCounter() {
 
   // Lifecycle
   onMounted(() => {
+    // eslint-disable-next-line no-console
     console.log('Counter is mounted');
   });
 

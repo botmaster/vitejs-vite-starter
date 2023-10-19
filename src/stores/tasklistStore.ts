@@ -4,9 +4,7 @@ import tasksLocalStorageService from '@/services/tasksLocalStorageService.ts';
 import { EnumTaskStatus } from '@/types/taskList.ts';
 import type { EnumTaskType, Task } from '@/types/taskList.ts';
 
-
 export const useTasklistStore = defineStore('task-list', () => {
-
   // Task-list
   const taskList = ref<Array<Task>>([]);
 
@@ -37,7 +35,7 @@ export const useTasklistStore = defineStore('task-list', () => {
       loading.value = true;
       error.value = null;
       const task: Task = {
-        id:  id ?? new Date().getTime(),
+        id: id ?? new Date().getTime(),
         title,
         type,
         status,
@@ -45,7 +43,6 @@ export const useTasklistStore = defineStore('task-list', () => {
 
       await tasksLocalStorageService.saveTask(task);
       taskList.value = await tasksLocalStorageService.getAllTasks();
-
     }
     catch (e) {
       error.value = (e as Error).message;
@@ -116,7 +113,6 @@ export const useTasklistStore = defineStore('task-list', () => {
       const completedTasks = taskList.value.filter(task => task.status === EnumTaskStatus.completed);
       await tasksLocalStorageService.deleteTasks(completedTasks.map(task => task.id));
       taskList.value = await tasksLocalStorageService.getAllTasks();
-
     }
     catch (e) {
       error.value = (e as Error).message;
@@ -141,4 +137,3 @@ export const useTasklistStore = defineStore('task-list', () => {
 
 if (import.meta.hot)
   import.meta.hot.accept(acceptHMRUpdate(useTasklistStore, import.meta.hot));
-

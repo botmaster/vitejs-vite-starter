@@ -1,7 +1,5 @@
-
 import type { Task } from '@/types/taskList.ts';
 import { randomInteger, sleep } from '@/utils/utils.ts';
-
 
 class TasksLocalStorageService {
   private readonly STORAGE_KEY = 'TASK_LIST';
@@ -55,14 +53,9 @@ class TasksLocalStorageService {
 
       else
         throw new Error(`Task with id ${taskId} not found`);
-
     });
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(tasks));
   }
 }
-
-
-
-
 
 export default new TasksLocalStorageService();

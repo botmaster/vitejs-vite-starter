@@ -1,4 +1,3 @@
-
 import { createApp } from 'vue';
 import './assets/styles/main.scss';
 import { createPinia } from 'pinia';
@@ -7,7 +6,6 @@ import router from './router';
 import App from './App.vue';
 import prettyConsole from '@/plugins/pretty-console';
 import i18n from '@/plugins/i18n';
-
 
 const app = createApp(App);
 

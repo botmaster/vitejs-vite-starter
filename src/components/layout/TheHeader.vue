@@ -10,9 +10,9 @@ import { Popover, PopoverButton, PopoverOverlay, PopoverPanel } from '@headlessu
 import { Icon } from '@iconify/vue';
 import AppButton from '@/components/shared/AppButton.vue';
 
-//import { useI18n } from 'vue-i18n';
+// import { useI18n } from 'vue-i18n';
 
-//const { t } = useI18n();
+// const { t } = useI18n();
 </script>
 
 <template>
@@ -96,7 +96,6 @@ import AppButton from '@/components/shared/AppButton.vue';
 
 <style scoped lang="scss">
   .header {
-
 
     &__container {
       @apply  relative z-50 px-4 max-w-screen-2xl mx-auto sm:px-6 lg:px-8 py-6 flex justify-between;

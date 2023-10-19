@@ -24,16 +24,16 @@ export default {
     );
 
     console.group('Project');
-    console.log(`Project name: %c${  pkg.name}`, 'color: #00b894');
-    console.log(`version: %c${  pkg.version}`, 'color: #00b894');
-    console.log(`Project description: %c${  pkg.description}`, 'color: #00b894');
-    console.log(`Project author: %c${  pkg.author}`, 'color: #00b894');
+    console.log(`Project name: %c${pkg.name}`, 'color: #00b894');
+    console.log(`version: %c${pkg.version}`, 'color: #00b894');
+    console.log(`Project description: %c${pkg.description}`, 'color: #00b894');
+    console.log(`Project author: %c${pkg.author}`, 'color: #00b894');
 
     console.groupEnd();
 
     console.group('Core');
     console.group('Vue');
-    console.log(`Vue.js version: %c${  app.version}`, 'color: #00b894');
+    console.log(`Vue.js version: %c${app.version}`, 'color: #00b894');
     console.groupEnd();
     console.groupEnd();
   },

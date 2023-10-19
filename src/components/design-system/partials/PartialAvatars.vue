@@ -13,7 +13,7 @@ const colors = [
 <template>
   <h2 id="avatar" class="relative">
     Avatar
-    <a class="header-anchor" href="#avatar" aria-label="Permalink to &quot;avatar&quot;">​</a>
+    <a class="header-anchor" href="#avatar" aria-label="Permalink to &quot;avatar&quot;">&nbsp;</a>
   </h2>
   <p>
     Component <code>AppAvatar</code>

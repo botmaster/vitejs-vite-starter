@@ -4,9 +4,9 @@ import _capitalize from 'lodash/capitalize';
 // import resolveConfig from 'tailwindcss/resolveConfig';
 // import tailwindConfig from 'tailwind-config';
 
-//const fullConfig = resolveConfig(tailwindConfig);
+// const fullConfig = resolveConfig(tailwindConfig);
 
-//const colors = fullConfig.theme.colors;
+// const colors = fullConfig.theme.colors;
 
 interface IColor {
   default: {
@@ -27,10 +27,8 @@ interface IColorData {
   classes: string
 }
 
-
 // Body styles
 const bodyStyles = getComputedStyle(document.body);
-
 
 // Colors data
 const baseColorData: Array<IColorData> = [
@@ -73,7 +71,6 @@ baseColorData.forEach((item) => {
   };
 });
 
-
 // Colors feedback
 const feedbackColorData: Array<IColorData> = [
   {
@@ -114,8 +111,6 @@ feedbackColorData.forEach((item) => {
     },
   };
 });
-
-
 
 const colorItemMap: Record<string, string> = {
   'gray-50': 'bg-gray-50',
@@ -213,7 +208,6 @@ const colorData = Object.entries(colorItemMap).map(([key, value]) => {
 
   .color-item {
     @apply flex items-start gap-4 text-xs;
-
 
     &__sample {
       @apply relative w-32 h-32 shrink-0;

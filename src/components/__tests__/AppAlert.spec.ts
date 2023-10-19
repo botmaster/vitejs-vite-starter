@@ -2,7 +2,6 @@ import { describe, expect, test } from 'vitest';
 import { mount } from '@vue/test-utils';
 import AppAlert from '../shared/AppAlert.vue';
 
-
 describe('Alert component', () => {
   test('renders the correct style for default', () => {
     const wrapper = mount(AppAlert, {});
@@ -79,9 +78,5 @@ describe('Alert component', () => {
     const closeButton = wrapper.find('.alert__close button');
     await closeButton.trigger('click');
     expect(wrapper.emitted()).toHaveProperty('close');
-  } );
+  });
 });
-
-
-
-

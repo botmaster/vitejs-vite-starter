@@ -53,4 +53,3 @@ import PartialAvatars from '@/components/design-system/partials/PartialAvatars.v
   opacity: 1;
 }
 </style>
-

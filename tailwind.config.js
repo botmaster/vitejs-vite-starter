@@ -31,7 +31,7 @@ export default {
       // Add gray fallbacks
       'gray': ((theme) => {
         const gray = { ...theme.gray };
-        const  objectKeys = Object.keys(gray);
+        const objectKeys = Object.keys(gray);
         objectKeys.forEach((key) => {
           gray[key] = `hsl(var(--color-gray-${key}) / <alpha-value>)`;
         });
@@ -90,8 +90,7 @@ export default {
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')({
     strategy: 'class',
   })],
-  /*safelist: [ {
+  /* safelist: [ {
     pattern: /^(bg|text)-/, // Whitelist bg- and text- utilities for design system.
-  } ],*/
+  } ], */
 };
-

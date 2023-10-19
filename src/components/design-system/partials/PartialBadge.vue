@@ -14,7 +14,7 @@ const colors = [
 <template>
   <h2 id="badge" class="relative">
     Badges
-    <a class="header-anchor" href="#badge" aria-label="Permalink to &quot;useColorMode&quot;">​</a>
+    <a class="header-anchor" href="#badge" aria-label="Permalink to &quot;useColorMode&quot;">&nbsp;</a>
   </h2>
 
   <p>
