@@ -114,6 +114,10 @@ import AppButton from '@/components/shared/AppButton.vue';
 
        &:deep(> a) {
            @apply no-underline;
+
+         &[aria-current="page"] {
+           @apply text-accent;
+         }
        }
     }
 
