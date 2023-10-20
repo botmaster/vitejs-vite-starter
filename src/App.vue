@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue';
+import TheSkipLink from '@/components/shared/TheSkipLink.vue';
 
 useHead({
   titleTemplate: (title?: string) => (!title ? 'Site name' : `${title} - Site name 🤘`),
@@ -27,6 +28,7 @@ useHead({
 </script>
 
 <template>
+  <TheSkipLink />
   <component :is="$route.meta.layout" v-if="$route?.meta?.layout" />
   <main v-else>
     <router-view />

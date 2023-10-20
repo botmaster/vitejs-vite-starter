@@ -98,7 +98,7 @@ import AppButton from '@/components/shared/AppButton.vue';
   .header {
 
     &__container {
-      @apply  relative z-50 px-4 max-w-screen-2xl mx-auto sm:px-6 lg:px-8 py-6 flex justify-between;
+      @apply  relative z-20 px-4 max-w-screen-2xl mx-auto sm:px-6 lg:px-8 py-6 flex justify-between;
     }
 
     &__nav {

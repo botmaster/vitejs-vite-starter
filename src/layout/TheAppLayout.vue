@@ -30,9 +30,9 @@ useHead({
         </RouterLink>
       </template>
     </TheHeader>
-    <div class="flex-grow">
+    <main id="main" class="flex-grow">
       <router-view />
-    </div>
+    </main>
     <TheFooter>
       <template #footer-links>
         <RouterLink :to="{ name: 'home' }">

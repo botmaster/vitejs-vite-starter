@@ -28,7 +28,7 @@ const colors = [
     Shapes
   </h3>
   <div class="flex items-end  gap-3 not-prose">
-    <Avatar src="https://placekitten.com/250/250" />
+    <Avatar src="https://placekitten.com/250/250" name="The Cat" />
     <Avatar src="https://placekitten.com/250/250" :rounded="false" />
   </div>
   <h3 class="">

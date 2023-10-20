@@ -92,12 +92,15 @@ const variants = [
       <div class="flex gap-2 items-end not-prose">
         <AppButton size="lg" icon>
           <Icon icon="uim:vuejs" :inline="true" />
+          <span class="sr-only">Vue.js</span>
         </AppButton>
         <AppButton icon>
           <Icon icon="uim:vuejs" :inline="true" />
+          <span class="sr-only">Vue.js</span>
         </AppButton>
         <AppButton size="sm" icon>
           <Icon icon="uim:vuejs" :inline="true" />
+          <span class="sr-only">Vue.js</span>
         </AppButton>
       </div>
     </div>

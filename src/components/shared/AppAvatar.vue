@@ -96,7 +96,7 @@ const isDefaultSlotFilled = computed(() => {
 
 <template>
   <div class="avatar" :class="avatarClasses">
-    <figure class="avatar__figure" role="img" :aria-label="name" :class="colorVariant">
+    <figure class="avatar__figure" :role="name ? 'img' : ''" :aria-label="name" :class="colorVariant">
       <p v-if="name || isDefaultSlotFilled" :title="name" class="avatar__initials">
         <slot><span>{{ avatarInitials }}</span></slot>
       </p>
@@ -112,7 +112,7 @@ const isDefaultSlotFilled = computed(() => {
           />
         </svg>
       </template>
-      <img v-if="src" class="avatar__img" :src="src" :alt="name" :title="name">
+      <img v-if="src" class="avatar__img" :src="src" :alt="name ? name : ''">
     </figure>
 
     <span v-if="status" role="status" class="avatar__status" :class="avatarClassesStatus" aria-label="Active" />

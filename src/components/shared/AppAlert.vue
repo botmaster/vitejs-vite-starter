@@ -62,7 +62,7 @@ const icon = computed(() => {
 </script>
 
 <template>
-  <div class="alert" :class="classes">
+  <div class="alert" :class="classes" role="alert">
     <div v-if="props.status && props.status !== 'default'" class="alert__icon">
       <Icon :icon="icon" :inline="false" />
     </div>
