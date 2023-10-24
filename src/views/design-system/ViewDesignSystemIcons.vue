@@ -11,6 +11,7 @@ import TwemojiAbButtonBloodType from '~icons/twemoji/ab-button-blood-type';
     <h1 class="">
       Icons
     </h1>
+    <h4>unplugin-icons</h4>
     <p class="not-prose text-base">
       <span>Lorem ipsum dolor sit amet.</span>
       <IconAccessibility />
@@ -18,12 +19,13 @@ import TwemojiAbButtonBloodType from '~icons/twemoji/ab-button-blood-type';
       <IcBaselineAirplanemodeActive />
       <TwemojiAbButtonBloodType />
     </p>
+    <h4>iconify/vue</h4>
     <p class="not-prose text-base">
       <span>Lorem ipsum dolor sit amet.</span>
       <Icon icon="mdi:account-box" :inline="true" />
       <Icon icon="ic:baseline-airplanemode-active" :inline="true" />
       <Icon icon="twemoji:ab-button-blood-type" :inline="true" />
-      <Icon icon="twemoji:ab-button-blood-type" :inline="true" />
+      <Icon icon="twemoji:ab-button-blood-type" :inline="false" />
       <Icon icon="twemoji:ab-button-blood-type" :inline="true" mode="svg" />
     </p>
   </div>

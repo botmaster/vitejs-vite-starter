@@ -21,24 +21,24 @@
     "@unhead/vue": "^1.7.4",
     "@vueuse/core": "^10.5.0",
     "pinia": "^2.1.7",
-    "vue": "^3.3.4",
+    "vue": "^3.3.6",
     "vue-i18n": "9.5.0",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.43.1",
-    "@iconify/json": "^2.2.130",
+    "@iconify/json": "^2.2.132",
     "@iconify/vue": "^4.1.1",
     "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/typography": "^0.5.10",
     "@tsconfig/node18": "^18.2.2",
     "@types/lodash": "^4.14.200",
-    "@types/node": "^20.8.7",
+    "@types/node": "^20.8.8",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/test-utils": "^2.4.1",
     "@vue/tsconfig": "^0.4.0",
     "autoprefixer": "^10.4.16",
-    "eslint": "^8.51.0",
+    "eslint": "^8.52.0",
     "fontaine": "^0.4.1",
     "jsdom": "^22.1.0",
     "lodash": "^4.17.21",
@@ -46,11 +46,11 @@
     "sass": "^1.69.4",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2",
-    "unplugin-icons": "^0.17.0",
+    "unplugin-icons": "^0.17.1",
     "vite": "^4.5.0",
     "vite-plugin-vue-devtools": "1.0.0-rc.5",
     "vite-svg-loader": "^4.0.0",
     "vitest": "^0.34.6",
-    "vue-tsc": "^1.8.19"
+    "vue-tsc": "^1.8.20"
   }
 }
