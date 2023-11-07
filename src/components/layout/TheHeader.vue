@@ -37,8 +37,10 @@ import AppButton from '@/components/shared/AppButton.vue';
               class="popover__button"
               aria-label="Toggle site navigation"
             >
-              <span v-if="open"><Icon icon="material-symbols:close" :inline="true" mode="svg" /></span>
-              <span v-else><Icon icon="material-symbols:menu" :inline="true" mode="svg" /></span>
+              <Transition name="fade">
+                <Icon v-if="open" icon="material-symbols:close" :inline="true" mode="svg" />
+                <Icon v-else icon="material-symbols:menu" :inline="true" mode="svg" />
+              </Transition>
             </PopoverButton>
             <transition
               enter-active-class="transition duration-300 ease-out"
@@ -129,7 +131,9 @@ import AppButton from '@/components/shared/AppButton.vue';
       @apply lg:hidden;
 
       &__button {
-        @apply relative z-10 text-xl;
+        @apply relative z-10 text-xl leading-[0] aspect-square flex items-center justify-center rounded-full w-10 h-10
+        hover:bg-white/70 hover:text-current focus:outline-0 focus:bg-white/70
+        transition-colors duration-300;
       }
 
       &__overlay {
@@ -148,5 +152,29 @@ import AppButton from '@/components/shared/AppButton.vue';
         @apply mt-8 flex flex-col gap-4;
       }
     }
+  }
+
+  /* 1. declare transition */
+  .fade-move,
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all 0.25s;
+    transform-origin: center;
+  }
+
+  /* 2. declare enter from and leave to state */
+  .fade-enter-from {
+    opacity: 0;
+    transform:  scale(1.4);
+  }
+  .fade-leave-to {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  /* 3. ensure leaving items are taken out of layout flow so that moving
+        animations can be calculated correctly. */
+  .fade-leave-active {
+    position: absolute;
   }
 </style>
