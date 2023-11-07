@@ -26,13 +26,15 @@ export default defineConfig({
     // Does not work properly.
     // TODO: Fix Fontaine implementation.
     FontaineTransform.vite({
-      fallbacks: ['ui-sans-serif',
+      fallbacks: [
+        'ui-sans-serif',
         'system-ui',
         'sans-serif',
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-        '"Noto Color Emoji"'],
+        '"Noto Color Emoji"',
+      ],
       // resolve absolute URL -> file
       resolvePath: id => new URL(`.${id}`, import.meta.url),
     }),

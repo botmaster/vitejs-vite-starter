@@ -1,8 +1,8 @@
 // Type fot task types
-export enum EnumTaskType {personal = 'personal', work = 'work', shopping = 'shopping', others = 'others'}
+export enum EnumTaskType { personal = 'personal', work = 'work', shopping = 'shopping', others = 'others' }
 
 // Type for task status
-export enum EnumTaskStatus {completed = 'completed', uncompleted = 'uncompleted'}
+export enum EnumTaskStatus { completed = 'completed', uncompleted = 'uncompleted' }
 
 // Type for filters by type
 export type TaskFilterByType = 'all' | EnumTaskType;
