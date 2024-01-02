@@ -1,8 +1,8 @@
 import { acceptHMRUpdate, defineStore } from 'pinia';
 import { ref } from 'vue';
-import tasksLocalStorageService from '@/services/tasksLocalStorageService.ts';
-import { EnumTaskStatus } from '@/types/taskList.ts';
-import type { EnumTaskType, Task } from '@/types/taskList.ts';
+import tasksLocalStorageService from '@/services/tasksLocalStorageService';
+import { EnumTaskStatus } from '@/types/taskList';
+import type { EnumTaskType, Task } from '@/types/taskList';
 
 export const useTasklistStore = defineStore('task-list', () => {
   // Task-list
@@ -30,7 +30,7 @@ export const useTasklistStore = defineStore('task-list', () => {
   }
 
   // Add task
-  async function addTask({ id, title, type, status }: { id?: number; title: string; type: EnumTaskType; status: EnumTaskStatus }) {
+  async function addTask({ id, title, type, status }: { id?: number, title: string, type: EnumTaskType, status: EnumTaskStatus }) {
     try {
       loading.value = true;
       error.value = null;

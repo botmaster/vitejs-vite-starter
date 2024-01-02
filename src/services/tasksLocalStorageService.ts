@@ -1,5 +1,5 @@
-import type { Task } from '@/types/taskList.ts';
-import { randomInteger, sleep } from '@/utils/utils.ts';
+import type { Task } from '@/types/taskList';
+import { randomInteger, sleep } from '@/utils/utils';
 
 class TasksLocalStorageService {
   private readonly STORAGE_KEY = 'TASK_LIST';

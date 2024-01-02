@@ -6,9 +6,9 @@ import { useI18n } from 'vue-i18n';
 import _capitalize from 'lodash/capitalize';
 import AppContainer from '@/components/layout/AppContainer.vue';
 import AppButton from '@/components/shared/AppButton.vue';
-import { useTasklistStore } from '@/stores/tasklistStore.ts';
-import type { Filter, Task, TaskFilterByStatus, TaskFilterByType } from '@/types/taskList.ts';
-import { EnumTaskStatus, EnumTaskType } from '@/types/taskList.ts';
+import { useTasklistStore } from '@/stores/tasklistStore';
+import type { Filter, Task, TaskFilterByStatus, TaskFilterByType } from '@/types/taskList';
+import { EnumTaskStatus, EnumTaskType } from '@/types/taskList';
 
 // I18n
 const { t } = useI18n();
@@ -52,7 +52,7 @@ const filtersByStatus: Array<Filter> = [
 ];
 
 // Types list
-const typesList: Array<{ value: EnumTaskType; label: string }> = [
+const typesList: Array<{ value: EnumTaskType, label: string }> = [
   {
     value: EnumTaskType.personal,
     label: 'Personal',
@@ -82,7 +82,7 @@ const currentFilterByType = ref<TaskFilterByType>('all');
 const currentFilterByStatus = ref<TaskFilterByStatus>('all');
 
 // New task form
-const newTaskForm = reactive<{ title: string; type: EnumTaskType }>({
+const newTaskForm = reactive<{ title: string, type: EnumTaskType }>({
   title: '',
   type: EnumTaskType.personal,
 });
