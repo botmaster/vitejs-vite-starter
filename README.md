@@ -9,9 +9,6 @@ Time saving. Setting up a Vue.js application from scratch takes time.
 
 > Largely inspired by [Vitesse](https://github.com/antfu/vitesse) by [Anthony Fu](https://github.com/antfu) 🙏
 
-
-
-
 ## Features
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/)
@@ -31,7 +28,6 @@ Time saving. Setting up a Vue.js application from scratch takes time.
 - 🌍 [i18n](https://github.com/botmaster/vuejs-vite-starter/tree/main/src/locales) ready
 
 - ⛲️ [Fontaine](https://github.com/danielroe/fontaine) Automatic font fallback based on font metrics
-
 
 ## Upcoming features / Libs / Plugins
 
