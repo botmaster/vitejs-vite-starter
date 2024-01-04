@@ -39,32 +39,6 @@ const { x, y } = useMouse();
         </div>
       </div>
     </AppGridLayout>
-    <!--    <AppContainer class="hero__container container">
-      <div class="hero__layout">
-        <div class="hero__main">
-          <h1 class="heading-1">
-            {{ t('pages.homepage.hero.title') }}
-          </h1>
-          <p class="mt-6 paragraph-lg text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad cum, distinctio esse eum iste laudantium, libero, maiores modi optio quidem quo ratione recusandae sed similique sint sit tenetur voluptate.
-          </p>
-          <p class="mt-6 lg:mt-14">
-            <AppButton color-variant="primary" size="lg">
-              {{ t('pages.homepage.hero.cta') }}
-            </AppButton>
-          </p>
-        </div>
-        <div class="hero__illustration">
-          <div class="-mx-4 [mask-image:linear-gradient(to_bottom,#F8F9FAFF_70%,transparent)] h-[448px] lg:-bottom-20 lg:-inset-x-10 lg:-top-10 lg:absolute lg:h-auto  lg:pt-10 lg:px-0 px-9 sm:mx-0 xl:-bottom-32">
-            <PhoneFrame class="max-w-[366px] mx-auto drop-shadow-phone-frame">
-              <div class="py-8 px-5 text-gray-100">
-                <p><code>Mouse position: {{ x }}, {{ y }}</code></p>
-              </div>
-            </PhoneFrame>
-          </div>
-        </div>
-      </div>
-    </AppContainer> -->
   </section>
 </template>
 
