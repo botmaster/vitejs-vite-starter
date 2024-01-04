@@ -39,6 +39,7 @@ export default defineConfig({
       resolvePath: id => new URL(`.${id}`, import.meta.url),
     }),
   ],
+
   build: {
     commonjsOptions: {
       include: ['tailwind-config.cjs', 'node_modules/**'],

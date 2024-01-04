@@ -37,21 +37,6 @@ const routes = [
       layout: layouts.TheDesignSystemLayout,
     },
     children: [
-      /* {
-                path: 'colors',
-                name: 'colors',
-                component: () => import('@/views/design-system/ViewDesignSystemColors.vue'),
-            },
-            {
-                path: 'typography',
-                name: 'typography',
-                component: () => import('@/views/design-system/ViewDesignSystemTypography.vue'),
-            },
-            {
-                path: 'icons',
-                name: 'icons',
-                component: () => import('@/views/design-system/ViewDesignSystemIcons.vue'),
-            }, */
       {
         path: 'homepage',
         name: 'designSystemHomepage',
@@ -77,6 +62,11 @@ const routes = [
         path: 'colors',
         name: 'designSystemColors',
         component: () => import('@/views/design-system/ViewDesignSystemColors.vue'),
+      },
+      {
+        path: 'layout',
+        name: 'designSystemLayout',
+        component: () => import('@/views/design-system/ViewDesignSystemLayout.vue'),
       },
     ],
   },
