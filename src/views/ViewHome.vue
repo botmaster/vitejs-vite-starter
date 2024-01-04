@@ -14,11 +14,8 @@ const { x, y } = useMouse();
 </script>
 
 <template>
-  <section class="overflow-hidden py-20 sm:py-20 lg:pb-32 xl:pb-36">
-    <AppContainer>
-      <HeroMain />
-    </AppContainer>
-  </section>
+  <HeroMain />
+
   <section class="mb-12 lg:mb-24">
     <AppContainer>
       <pre>Mouse position: {{ x }}, {{ y }}</pre>
@@ -66,3 +63,7 @@ const { x, y } = useMouse();
     </AppContainer>
   </section>
 </template>
+
+<style  lang="scss">
+
+</style>
